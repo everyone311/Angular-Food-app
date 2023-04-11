@@ -10,7 +10,6 @@ label{
 .container{
     background-image: url('../../assests/register.png');
     background-size: cover;
-    -webkit-background-size:cover ;
 }
 .register-form{
     padding-left: 70%;

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl,FormGroup,Validators,FormBuilder,AbstractControl } from '@angular/forms';
 import { Validation } from '../../assests/shared/password-valiadation';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register-page',
   templateUrl: './register-page.component.html',
@@ -15,7 +15,7 @@ export class RegisterPageComponent {
     pWord:new FormControl,
     cpWord:new FormControl
   })
-  constructor(private Lf:FormBuilder){}
+  constructor(private Lf:FormBuilder, public router:Router){}
   ngOnInit():void{
     this.form=this.Lf.group({
       Uname:['',[Validators.required]],
@@ -24,9 +24,10 @@ export class RegisterPageComponent {
       pWord:['',[Validators.required]],
       cpWord:['',[Validators.required]]
   },
-  {
-    validator: Validation.match("password", "confirmPassword")
-  });
+  // {
+  //   validator: Validation.match("password", "confirmPassword")
+  // }
+  );
   }
   
   get f():{[key:string]:AbstractControl}
@@ -36,6 +37,7 @@ export class RegisterPageComponent {
   submit:boolean=false;
   onSubmit():void{
     this.submit=true;
+    this.form.reset();
   }
-  
+
 }
