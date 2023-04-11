@@ -1,0 +1,119 @@
+.homeImageContainer {
+  background-image: url("../../assets/home-image.jpg");
+  background-size: cover;
+  background-size: contain;
+  -webkit-background-size: cover;
+  min-height: 800px;
+  width: 100%;
+}
+.textContainer {
+  padding-left: 50%;
+  padding-top: 10%;
+  /* width: 400px; */
+}
+.imgText {
+  color: white;
+  font-size: 60px;
+}
+.imgParagraph {
+  color: white;
+  width: 600px;
+  padding: 40px;
+}
+
+/* Box */
+
+.box-container {
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  justify-content: center;
+  column-gap: 50px;
+}
+.box {
+  background-color: rgb(244, 213, 213);
+  color: black;
+  height: 300px;
+  width: 300px;
+  border: 2px solid rgb(233, 230, 230);
+  padding: 20px;
+  border-radius: 2px;
+  /* box-shadow: 0px 0px 9px 9px rgba(204, 203, 203, 0.9); */
+  box-shadow: 2px 2px 5px #ccc;
+  transition: all 0.3s ease;
+}
+.fa-user-tie,
+.fa-utensils,
+.fa-cart-shopping,
+.fa-headset {
+  color: orange;
+  font-size: 60px;
+  padding: 10px 10px 10px 10px;
+}
+
+.box:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  width: 260px;
+  height: 310px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.box i {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* About us */
+
+.aboutusContainer {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  height: 600px;
+  background-color: aquamarine;
+  padding: 60px;
+}
+.restaurant1 {
+  height: 464px;
+  width: 100%;
+  padding-right: 30px;
+}
+.container-xxl {
+  padding: 40px;
+}
+.container {
+  /* border: 2px solid gray; */
+  padding: 30px;
+  box-shadow: 0px 0px 9px 9px rgba(204, 203, 203, 0.9);
+  border-radius: 5px;
+}
+.aboutusText {
+  color: brown;
+  font-size: 25px;
+  font-family: cursive;
+}
+.readmoreButton {
+  background-color: brown;
+  border: none;
+}
+.text-primary {
+  color: orange !important;
+}
