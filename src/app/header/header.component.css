@@ -1,0 +1,50 @@
+.header-container a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.header-container a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+.logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 15px;
+}
+
+.rightHeader a:hover {
+  color: #e2d112;
+
+  border-bottom: 3px solid #e2d112;
+}
+
+.rightHeader a.active {
+  background-color: rgb(252, 219, 99);
+  color: white;
+}
+
+.rightHeader {
+  float: right;
+}
+.rightHeader a {
+  font-size: 24px;
+}
+
+.header-container {
+  /* background-color: #855e42; */
+  width: 100%;
+  height: 90px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: brown;
+  color: white;
+  padding: 20px 10px 10px 10px;
+  box-shadow: 0px 0px 0px 1.5px rgb(197, 197, 163);
+}
