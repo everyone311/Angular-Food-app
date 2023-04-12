@@ -1,69 +1,86 @@
 import { Component } from '@angular/core';
 
-import {
-  FormControl,
-  FormGroup,
-  Validators,
-  FormBuilder,
-  AbstractControl,
-} from '@angular/forms';
+import { FormControl,FormGroup,Validators,FormBuilder,AbstractControl } from '@angular/forms';
+
+
 
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-register-page',
 
-  templateUrl: './register-page.component.html',
+  selector: 'app-register-page',
 
-  styleUrls: ['./register-page.component.css'],
+  templateUrl: './register-page.component.html',
+
+  styleUrls: ['./register-page.component.css']
+
 })
+
 export class RegisterPageComponent {
-  form: FormGroup = new FormGroup({
-    Uname: new FormControl(),
 
-    Pno: new FormControl(),
+  form:FormGroup=new FormGroup({
 
-    Email: new FormControl(),
+    Uname:new FormControl,
 
-    pWord: new FormControl(),
+    Pno:new FormControl,
 
-    cpWord: new FormControl(),
-  });
+    Email:new FormControl,
 
-  constructor(private Lf: FormBuilder, public router: Router) {}
+    pWord:new FormControl,
 
-  ngOnInit(): void {
-    this.form = this.Lf.group(
-      {
-        Uname: ['', [Validators.required]],
+    cpWord:new FormControl
 
-        Email: ['', [Validators.required, Validators.email]],
+  })
 
-        Pno: [
-          '',
-          [
-            Validators.required,
-            Validators.minLength(10),
-            Validators.maxLength(10),
-          ],
-        ],
+  constructor(private Lf:FormBuilder, public router:Router){}
 
-        pWord: ['', [Validators.required]],
+  ngOnInit():void{
 
-        cpWord: ['', [Validators.required]],
-      } // { //   validator: Validation.match("password", "confirmPassword") // }
-    );
-  }
+    this.form=this.Lf.group({
 
-  get f(): { [key: string]: AbstractControl } {
-    return this.form.controls;
-  }
+      Uname:['',[Validators.required]],
 
-  submit: boolean = false;
+      Email:['',[Validators.required,Validators.email]],
 
-  onSubmit(): void {
-    this.submit = true;
+      Pno:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
 
-    this.form.reset();
-  }
+      pWord:['',[Validators.required]],
+
+      cpWord:['',[Validators.required]]
+
+  },
+
+  // {
+
+  //   validator: Validation.match("password", "confirmPassword")
+
+  // }
+
+  );
+
+  }
+
+ 
+
+  get f():{[key:string]:AbstractControl}
+
+  {
+
+    return this.form.controls;
+
+  }
+
+  submit:boolean=false;
+
+  onSubmit():void{
+
+    this.submit=true;
+
+    this.form.reset();
+
+  }
+
+
+
+
 }
