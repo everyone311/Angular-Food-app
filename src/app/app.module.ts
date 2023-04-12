@@ -7,7 +7,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { HeaderComponent } from './header/header.component';
 import { IonicModule } from '@ionic/angular';
@@ -21,16 +21,16 @@ import { ViewFoodsComponent } from './view-foods/view-foods.component';
     HomepageComponent,
     HeaderComponent,
     FooterComponent,
-    ViewFoodsComponent
+    ViewFoodsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-   
-
+    IonicModule,
+    HttpClientModule,
   ],
-  // imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, IonicModule],
+
   providers: [],
   bootstrap: [AppComponent],
 })
