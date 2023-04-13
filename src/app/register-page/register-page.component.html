@@ -1,65 +1,101 @@
 <div class="body">
-    <div class="container">
-        <div class="register-form">
-            <form [formGroup]="form" (ngSubmit)="onSubmit()" method="post">
-                <div class="form-group">
-                    <label for="uname">Username</label><br>
-                    <input type="text" formControlName="Uname" class="form-control"
-                        [ngClass]="{ 'is-invalid':submit && f['Uname'].errors}">
-                    <div *ngIf="submit&& f['Uname'].errors">
-                        <div *ngIf="f['Uname'].errors['required']" class="text-danger">User Name is required</div>
 
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label><br>
-                    <input type="email" formControlName="Email" class="form-control"
-                        [ngClass]="{'is-invalid':submit && f['Email'].errors}">
-                    <div *ngIf="submit && f['Email'].errors">
-                        <div *ngIf="f['Email'].errors['required']" class="text-danger">Email is required</div>
-                        <div *ngIf="f['Email'].errors['email']" class="text-danger">Email should be valid </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label><br>
-                    <input type="text" formControlName="Pno" class="form-control"
-                        [ngClass]="{'is-invalid':submit && f['Pno'].errors}">
-                    <div *ngIf="submit && f['Pno'].errors">
-                        <div *ngIf="f['Pno'].errors['required']" class="text-danger">Phone number is required</div>
-                        <div *ngIf="f['Pno'].errors['minlength']" class="text-danger">Phone number should contain only
-                            10 digit
-                        </div>
-                        <div *ngIf="f['Pno'].errors['maxlength']" class="text-danger">Phone number should contain only
-                            10 digit
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="pWord">Password</label><br>
-                    <input type="pWord" formControlName="pWord" class="form-control"
-                        [ngClass]="{'is-invalid':submit && f['pWord'].errors}">
-                    <div *ngIf="submit && f['pWord'].errors">
-                        <div *ngIf="f['pWord'].errors['required']" class="text-danger">Pasword is required</div>
-                        <div *ngIf="f['pWord'].errors['pWord']" class="text-danger">Password should be valid </div>
-                    </div>
-                </div>
-                <!-- <div class="form-group">
-                    <label for="cpWord">Re-Type Password</label><br>
-                    <input type="cpWord" formControlName="ccpWord" class="form-control"
-                        [ngClass]="{'is-invalid':submit && f['pWord'].errors}">
-                    <div *ngIf="submit && f['cpWord'].errors">
-                        <div *ngIf="f['cpWord'].errors['required']" class="text-danger">Pasword is required</div>
-                        <div *ngIf="f['cpWord'].errors['validation']" class="text-danger">Password
-                            doesn't match. </div>
-                    </div>
-                </div> -->
-                <br>
-            
-                <button type="submit" class="btn btn-success" >Register</button><br><br>
-                <p>Already have an Account?<a [routerLink]="['/Login']">Sign In</a></p>
-            </form>
-            
+  <div class="container">
+    <div class="register-form">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="uname">Username</label><br />
+          <input
+            type="text"
+            formControlName="Uname"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submit && f['Uname'].errors }"
+          />
+          <div *ngIf="submit && f['Uname'].errors">
+            <div *ngIf="f['Uname'].errors['required']" class="text-danger">
+              User Name is required
+            </div>
+          </div>
         </div>
+        <div class="form-group">
+          <label for="email">Email</label><br />
+          <input
+            type="email"
+            formControlName="Email"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submit && f['Email'].errors }"
+          />
+          <div *ngIf="submit && f['Email'].errors">
+            <div *ngIf="f['Email'].errors['required']" class="text-danger">
+              Email is required
+            </div>
+            <div *ngIf="f['Email'].errors['email']" class="text-danger">
+              Email should be valid
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label><br />
+          <input
+            type="text"
+            formControlName="Pno"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submit && f['Pno'].errors }"
+          />
+          <div *ngIf="submit && f['Pno'].errors">
+            <div *ngIf="f['Pno'].errors['required']" class="text-danger">
+              Phone number is required
+            </div>
+            <div *ngIf="f['Pno'].errors['minlength']" class="text-danger">
+              Phone number should contain only 10 digit
+            </div>
+            <div *ngIf="f['Pno'].errors['maxlength']" class="text-danger">
+              Phone number should contain only 10 digit
+            </div>
+          </div>
+
+        </div>
+        <div class="form-group">
+          <label for="pWord">Password</label><br />
+          <input
+            type="pWord"
+            formControlName="pWord"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submit && f['pWord'].errors }"
+          />
+          <div *ngIf="submit && f['pWord'].errors">
+            <div *ngIf="f['pWord'].errors['required']" class="text-danger">
+              Pasword is required
+            </div>
+            <div *ngIf="f['pWord'].errors['pWord']" class="text-danger">
+              Password should be valid
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cpWord">Re-Type Password</label><br />
+          <input
+            type="cpWord"
+            formControlName="ccpWord"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submit && f['pWord'].errors }"
+          />
+          <div *ngIf="submit && f['cpWord'].errors">
+            <div *ngIf="f['cpWord'].errors['required']" class="text-danger">
+              Pasword is required
+            </div>
+            <div *ngIf="f['cpWord'].errors['validation']" class="text-danger">
+              Password doesn't match.
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <button type="submit" class="btn btn-success">Register</button
+        ><br /><br />
+        <p>Already have an Account?<a [routerLink]="['/Login']">Sign In</a></p>
+      </form>
     </div>
+  </div>
 </div>
 <router-outlet></router-outlet>
