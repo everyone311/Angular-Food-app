@@ -6,18 +6,38 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 
+import { RouterModule } from '@angular/router';
+
+import { FooterComponent } from './footer/footer.component';
+
+import { HomepageComponent } from './homepage/homepage.component';
+import { HeaderComponent } from './header/header.component';
+import { IonicModule } from '@ionic/angular';
+
+import { HttpClientModule } from '@angular/common/http';
+
+import { ViewFoodsComponent } from './view-foods/view-foods.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    HomepageComponent,
+    HeaderComponent,
+    FooterComponent,
+
+    ViewFoodsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IonicModule,
+    HttpClientModule,
   ],
+
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import {
   FormControl,
   FormGroup,
@@ -6,11 +7,14 @@ import {
   FormBuilder,
   AbstractControl,
 } from '@angular/forms';
-import { Validation } from '../validation/password-validation';
+
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-page',
+
   templateUrl: './register-page.component.html',
+
   styleUrls: ['./register-page.component.css'],
 })
 export class RegisterPageComponent {
@@ -37,10 +41,10 @@ export class RegisterPageComponent {
         ],
         pWord: ['', [Validators.required]],
         cpWord: ['', [Validators.required]],
-      },
-      {
-        validator: Validation.match('password', 'confirmPassword'),
       }
+      // {
+      //   validator: Validation.match('password', 'confirmPassword'),
+      // }
     );
   }
 
