@@ -1,0 +1,117 @@
+.foodMenuTextContainer,
+.breakfastContainer {
+  display: flex;
+  justify-content: center;
+}
+.breakfastContainer {
+  padding-bottom: 20px;
+  border-bottom: 4px solid gray;
+}
+.popular:hover,
+.special:hover,
+.lovely:hover,
+.all:hover {
+  border-bottom: 4px solid orange;
+ 
+}
+/* .breakfastContainer:hover
+{
+    transform: scale(1.1);
+    transition: 0.4s;
+    box-shadow: 0px 3px 10px 0px grey;
+    padding: 5px;
+    border-radius: 5px;
+} */
+.small-line {
+  border-bottom: 5px solid orange;
+  width: 50px;
+  margin: 10px;
+}
+.foodMenuContainer {
+  width: 500px;
+  height: 300px;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 20px;
+  /* box-shadow: 0px 0px 9px 9px rgba(149, 148, 148, 0.1); */
+}
+.foodMenuText {
+  color: #fea116;
+  font-family: cursive;
+  font-size: 25px;
+}
+.popularItems {
+  color: #0f172b;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 40px 0px 40px 0px;
+  font-size: 45px;
+  font-style: italic;
+}
+.fa-mug-hot,
+.fa-burger,
+.fa-apple-whole,
+.fa-concierge-bell,
+.fa-blender,
+.fa-ice-cream {
+  color: #fea116;
+  font-size: 40px;
+  padding: 10px;
+}
+.fa-mug-hot:hover,
+.fa-burger:hover,
+.fa-apple-whole:hover,
+.fa-concierge-bell:hover,
+.fa-blender:hover,
+.fa-ice-cream:hover
+{
+    transform: scale(1.5);
+    transition: 0.4s;
+}
+.grayAndSmall {
+  color: rgb(170, 168, 168);
+  font: 18px;
+}
+.foodMenuFooterContainer {
+  display: grid;
+  grid-template-columns: 150px 150px 150px 150px 150px 150px 150px;
+  justify-content: center;
+  /* padding: 40px; */
+}
+
+.foodCard
+{
+    padding: 10px;
+    text-align: center;
+    /* border: 1px solid black; */
+    box-shadow: 0px 5px 7px 0px grey;
+    width: 300px;
+    margin: 10px;
+}
+.foodName
+{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 5px;
+}
+.foodCost
+{
+    font-weight: bold;
+    margin: 5px;
+
+}
+.foodCard .btn-warning
+{
+    font-size: 24px;
+    width: 200px;
+    margin: 5px;
+
+}
+.foodContainer
+{
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    gap: 3.5rem;
+    margin: 10px;
+}
