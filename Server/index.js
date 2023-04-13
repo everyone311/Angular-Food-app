@@ -28,7 +28,9 @@ app.use(
 app.use(cors());
 
 app.use(
+
     express.static(path.join(__dirname, "dist/Server"))
+
 );
 
 // API root
@@ -53,13 +55,15 @@ app.get("/", (req, res) => {
 
 app.get("*", (req, res) => {
     res.sendFile(
+
         path.join(__dirname, "dist/Server/index.html")
+
     );
 });
 
 // error handler
 app.use(function (err, req, res, next) {
-    console.log("S")
+
     console.error(err.message);
     if (!err.statusCode) err.statusCode = 500;
     res.status(err.statusCode).send(err.message);
