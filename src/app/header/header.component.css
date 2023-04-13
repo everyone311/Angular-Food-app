@@ -12,12 +12,20 @@
   font-size: 25px;
   font-weight: bold;
 } */
-/* .logo {
-  height: 70px;
-  width: 70px;
-  border-radius: 15px;
-} */
+.leftHeader {
+  float: left;
+}
+img {
+  height: 205px;
+  padding-top: 33px;
+  margin-top: -87px;
+  margin-left: -42px;
+}
+p{
+  margin: -104px 0 10px;
+    margin-left: 101px;
 
+}
 a
 {
   text-decoration: none;
@@ -75,3 +83,4 @@ a
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+  
