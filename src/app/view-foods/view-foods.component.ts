@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FoodDetailsService } from '../food-details.service';
 
 @Component({
   selector: 'app-view-foods',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-foods.component.css']
 })
 export class ViewFoodsComponent {
+
+  getFoods:any[] = []
+  constructor(private _getFoods:FoodDetailsService){
+    this.getFoods = _getFoods.getFoods();
+  }
+
 
 }
