@@ -1,3 +1,10 @@
+.boldClass {
+  font-weight: bold;
+}
+.flexClass {
+  display: flex;
+}
+
 .homeImageContainer {
   background-image: url("../../assets/home-image.jpg");
   background-size: cover;
@@ -13,7 +20,7 @@
 }
 .imgText {
   color: white;
-  font-size: 60px;
+  font-size: 55px;
 }
 .imgParagraph {
   color: white;
@@ -31,7 +38,7 @@
   column-gap: 50px;
 }
 .box {
-  background-color: rgb(244, 213, 213);
+  /* background-color: rgb(250, 235, 235); */
   color: black;
   height: 300px;
   width: 300px;
@@ -39,7 +46,7 @@
   padding: 20px;
   border-radius: 2px;
   /* box-shadow: 0px 0px 9px 9px rgba(204, 203, 203, 0.9); */
-  box-shadow: 2px 2px 5px #ccc;
+  box-shadow: 0px 7px 10px 0px #ccc;
   transition: all 0.3s ease;
 }
 .fa-user-tie,
@@ -51,11 +58,11 @@
   padding: 10px 10px 10px 10px;
 }
 
-.box:hover {
+/* .box:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   width: 260px;
   height: 310px;
-}
+} */
 .box {
   display: flex;
   flex-direction: column;
@@ -92,7 +99,7 @@
   padding: 60px;
 }
 .restaurant1 {
-  height: 464px;
+  height: 517px;
   width: 100%;
   padding-right: 30px;
 }
@@ -102,7 +109,7 @@
 .container {
   /* border: 2px solid gray; */
   padding: 30px;
-  box-shadow: 0px 0px 9px 9px rgba(204, 203, 203, 0.9);
+  box-shadow: 0px 0px 9px 9px rgba(204, 203, 203, 0.5);
   border-radius: 5px;
 }
 .aboutusText {

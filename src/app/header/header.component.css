@@ -8,32 +8,33 @@
   line-height: 25px;
 }
 
-.header-container a.logo {
+/* .header-container a .logo {
   font-size: 25px;
   font-weight: bold;
-}
-.logo {
+} */
+/* .logo {
   height: 70px;
   width: 70px;
   border-radius: 15px;
-}
+} */
 
-.rightHeader a:hover {
-  color: #e2d112;
-
-  border-bottom: 3px solid #e2d112;
-}
-
-.rightHeader a.active {
-  background-color: rgb(252, 219, 99);
+a
+{
+  text-decoration: none;
   color: white;
 }
+
+/* .rightHeader a :active {
+  background-color: rgb(252, 219, 99);
+  color: white;
+} */
 
 .rightHeader {
   float: right;
 }
 .rightHeader a {
   font-size: 24px;
+  margin: 0px 10px 0px 10px;
 }
 
 .header-container {
@@ -43,8 +44,34 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: brown;
+  background: linear-gradient(to bottom, brown, rgb(37, 37, 37));
   color: white;
   padding: 20px 10px 10px 10px;
   box-shadow: 0px 0px 0px 1.5px rgb(197, 197, 163);
 }
+
+.rightHeader a:hover
+{
+    text-decoration: none;
+    position: relative;
+    color: #e2d112;
+    transform: scale(1.1);
+}
+
+.rightHeader a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:#e2d112;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    transform: scaleX(0);
+  }
+  .rightHeader a:hover::after
+  {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
