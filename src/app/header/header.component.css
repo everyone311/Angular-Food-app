@@ -21,14 +21,11 @@ img {
   margin-top: -87px;
   margin-left: -42px;
 }
-p{
+p {
   margin: -104px 0 10px;
-    margin-left: 101px;
-
-
-a
-{
-
+  margin-left: 101px;
+}
+a {
   text-decoration: none;
   color: white;
 }
@@ -67,22 +64,18 @@ a
 }
 
 .rightHeader a::after {
-
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color:#e2d112;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-    transform: scaleX(0);
-  }
- a:hover::after
-  {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-  
-
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #e2d112;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  transform: scaleX(0);
+}
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
