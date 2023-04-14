@@ -64,6 +64,15 @@
   padding: 10px;
   color: rgb(252, 240, 240);
 }
+<<<<<<< Updated upstream
+=======
+.footerContent a{
+  text-decoration: none;
+  color: rgb(252, 240, 240);
+}
+
+
+>>>>>>> Stashed changes
 .fa-twitter,
 .fa-facebook-f,
 .fa-youtube,
