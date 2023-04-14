@@ -1,0 +1,39 @@
+.aboutContainer
+{
+    margin:10px;
+    width: 70%;
+    background-color:lightgrey;
+    text-align: center;
+    opacity: 0.9;
+    padding: 10px;
+
+}
+hr
+{
+    color: black;
+}
+h2
+{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.Image
+{
+
+    background-image: url('src\assets\restaurant-table.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 30px;
+    margin: 20px 0px 20px 0px;
+}
+
+.text
+{
+    margin: 10px;   
+}
+.line
+{
+    border: 1px solid black;
+}

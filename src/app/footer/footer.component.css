@@ -38,9 +38,9 @@
 .firstFooterContainer {
   display: grid;
   grid-template-columns: auto auto auto auto;
-
   max-height: 700px;
-  padding: 40px;
+  padding: 50px;
+  
 }
 .footerHeading {
   font-family: "Rubik";
@@ -64,6 +64,7 @@
   padding: 10px;
   color: rgb(252, 240, 240);
 }
+
 .fa-twitter,
 .fa-facebook-f,
 .fa-youtube,
