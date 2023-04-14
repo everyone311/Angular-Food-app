@@ -16,7 +16,6 @@
 .textContainer {
   padding-left: 50%;
   padding-top: 10%;
-  /* width: 400px; */
 }
 .imgText {
   color: white;
@@ -24,28 +23,40 @@
 }
 .imgParagraph {
   color: white;
-  width: 600px;
-  padding: 40px;
+  font-size: 24px;
+  padding: 6rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.fa-mug-hot,
+.fa-door-open {
+  font-size: 40px;
+  color: orange;
+  padding: 10px;
+}
+.foodDeliveryimg {
+  height: 60px;
+  width: 60px;
+  padding-right: 10px;
+}
+.deliveryText {
+  padding-top: 15px;
 }
 
 /* Box */
 
 .box-container {
-  padding: 60px;
   display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
-  justify-content: center;
-  column-gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 4rem;
+  justify-items: center;
 }
 .box {
-  /* background-color: rgb(250, 235, 235); */
   color: black;
   height: 300px;
   width: 300px;
   border: 2px solid rgb(233, 230, 230);
-  padding: 20px;
   border-radius: 2px;
-  /* box-shadow: 0px 0px 9px 9px rgba(204, 203, 203, 0.9); */
   box-shadow: 0px 7px 10px 0px #ccc;
   transition: all 0.3s ease;
 }
@@ -58,11 +69,6 @@
   padding: 10px 10px 10px 10px;
 }
 
-/* .box:hover {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  width: 260px;
-  height: 310px;
-} */
 .box {
   display: flex;
   flex-direction: column;
@@ -93,7 +99,7 @@
 .aboutusContainer {
   display: flex;
   margin: auto;
-  width: 90%;
+  width: 80%;
   height: 600px;
   background-color: aquamarine;
   padding: 60px;
@@ -217,8 +223,7 @@ td {
 }
 .foodMenuFooterContainer {
   display: grid;
-  grid-template-columns: 150px 150px 150px;
-  /* padding: 40px; */
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* show items */
@@ -227,10 +232,35 @@ td {
   width: 80%;
   height: 500px;
   margin: auto;
-  /* background-color: #ccc; */
   margin-top: 50px;
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: center;
   border: 2px solid gray;
+}
+
+/* responsive */
+
+@media only screen and (min-width: 830px) and (max-width: 1330px) {
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10rem;
+    justify-items: center;
+    row-gap: 5rem;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10rem;
+    justify-items: center;
+    row-gap: 5rem;
+  }
+}
+@media only screen and (max-width: 1195px) {
+  .restaurant1 {
+    padding: 0;
+  }
 }
