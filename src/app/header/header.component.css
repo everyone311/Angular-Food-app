@@ -33,10 +33,10 @@ a
   color: white;
 }
 
-/* .rightHeader a :active {
+.rightHeader a :active {
   background-color: rgb(252, 219, 99);
   color: white;
-} */
+}
 
 .rightHeader {
   float: right;
@@ -79,7 +79,7 @@ a
     transition: transform 0.25s ease-out;
     transform: scaleX(0);
   }
-  .rightHeader a:hover::after
+ a:hover::after
   {
     transform: scaleX(1);
     transform-origin: bottom left;

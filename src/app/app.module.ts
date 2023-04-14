@@ -17,6 +17,7 @@ import { IonicModule } from '@ionic/angular';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ViewFoodsComponent } from './view-foods/view-foods.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ViewFoodsComponent } from './view-foods/view-foods.component';
     FooterComponent,
 
     ViewFoodsComponent,
+      AboutComponent,
   ],
   imports: [
     BrowserModule,
