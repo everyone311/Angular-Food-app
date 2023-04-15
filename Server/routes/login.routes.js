@@ -5,7 +5,9 @@ const routing = express.Router();
 let Login = require("../model/Login");
 
 routing.route("/login").post((req, res, next) => {
-    Login.create(req.body, (error, data))
+
+    Login.create(req.body)
+
         .then((data) => {
             res.json(data)
         })
