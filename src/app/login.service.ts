@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Login } from './login';
+import { Register } from './register';
 import { catchError, map } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import {
@@ -19,6 +20,13 @@ export class LoginService {
 
   AddUser(data: Login): Observable<any> {
     let API_URL = `${this.REST_API}/login`;
+    return this.httpClient
+      .post(API_URL, data)
+      .pipe(catchError(this.handleError));
+  }
+
+  RegisterUser(data: Register): Observable<any> {
+    let API_URL = `${this.REST_API}/register`;
     return this.httpClient
       .post(API_URL, data)
       .pipe(catchError(this.handleError));
