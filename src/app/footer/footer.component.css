@@ -2,10 +2,14 @@
   background-color: brown;
   width: 100%;
 }
+.footerContent a {
+  color: rgb(252, 240, 240);
+  text-decoration: none;
+}
 .firstFooterContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  min-height: 700px;
+  min-height: 290px;
   padding: 3.2rem;
 }
 .footerHeading {

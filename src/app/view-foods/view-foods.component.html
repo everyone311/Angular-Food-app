@@ -1,44 +1,42 @@
-
 <div class="foodMenuContainer">
-    <div class="foodMenuTextContainer">
-      <div class="small-line"></div>
-      <div class="foodMenuText">Food Menu</div>
-      <div class="small-line"></div>
+  <div class="foodMenuTextContainer">
+    <div class="small-line"></div>
+    <div class="foodMenuText">Food Menu</div>
+    <div class="small-line"></div>
+  </div>
+  <div class="popularItems">Available Food Items</div>
+  <div class="foodMenuFooterContainer">
+    <div class="breakfastContainer all" (click)="filterByCategory('All')">
+      <i class="fa-solid fa-concierge-bell"></i>
+      <div>
+        <div class="grayAndSmall">All foods</div>
+        <div class="boldClass">All foods</div>
+      </div>
     </div>
-    <div class="popularItems">Available Food Items</div>
-    <div class="foodMenuFooterContainer">
-        
-        <div class="breakfastContainer all">
-            <i class="fa-solid fa-concierge-bell"></i>
-            <div>
-                <div class="grayAndSmall">All foods</div>
-                <div class="boldClass">All foods</div>
-            </div>
-        </div>
 
-      <div class="breakfastContainer popular">
-        <i class="fa-solid fa-mug-hot"></i>
-        <div>
-          <div class="grayAndSmall">Popular</div>
-          <div class="boldClass">Breakfast</div>
-        </div>
+    <div class="breakfastContainer popular">
+      <i class="fa-solid fa-mug-hot"></i>
+      <div>
+        <div class="grayAndSmall">Popular</div>
+        <div class="boldClass">Breakfast</div>
       </div>
-      <div class="breakfastContainer special">
-        <i class="fa-solid fa-burger"></i>
-        <div>
-          <div class="grayAndSmall">Special</div>
-          <div class="boldClass">Lunch</div>
-        </div>
+    </div>
+    <div class="breakfastContainer special">
+      <i class="fa-solid fa-burger"></i>
+      <div>
+        <div class="grayAndSmall">Special</div>
+        <div class="boldClass">Lunch</div>
       </div>
-      <div class="breakfastContainer lovely">
-        <i class="fa-solid fa-apple-whole"></i>
-        <div>
-          <div class="grayAndSmall">Lovely</div>
-          <div class="boldClass">Dinner</div>
-        </div>
+    </div>
+    <div class="breakfastContainer lovely">
+      <i class="fa-solid fa-apple-whole"></i>
+      <div>
+        <div class="grayAndSmall">Lovely</div>
+        <div class="boldClass">Dinner</div>
       </div>
+    </div>
 
-      <!-- <div class="breakfastContainer all">
+    <!-- <div class="breakfastContainer all">
         <i class="fa-solid fa-concierge-bell"></i>
         <div>
             <div class="grayAndSmall">Popular</div>
@@ -54,28 +52,28 @@
         </div>
     </div> -->
 
-    <div class="breakfastContainer all">
-        <i class="fa-solid fa-concierge-bell"></i>
-        <div>
-            <div class="grayAndSmall">Exclusive</div>
-            <div class="boldClass">Starters</div>
-        </div>
+    <div class="breakfastContainer all" (click)="filterByCategory('Starter')">
+      <i class="fa-solid fa-concierge-bell"></i>
+      <div>
+        <div class="grayAndSmall">Exclusive</div>
+        <div class="boldClass">Starters</div>
+      </div>
     </div>
 
-    <div class="breakfastContainer all">
-        <i class="fa-solid fa-ice-cream"></i>
-        <div>
-            <div class="grayAndSmall">Delightful</div>
-            <div class="boldClass">Desserts</div>
-        </div>
+    <div class="breakfastContainer all" (click)="filterByCategory('Desserts')">
+      <i class="fa-solid fa-ice-cream"></i>
+      <div>
+        <div class="grayAndSmall">Delightful</div>
+        <div class="boldClass">Desserts</div>
+      </div>
     </div>
 
-    <div class="breakfastContainer all">
-        <i class="fa-solid fas fa-blender"></i>
-        <div>
-            <div class="grayAndSmall">Cool</div>
-            <div class="boldClass">Bevarages</div>
-        </div>
+    <div class="breakfastContainer all" (click)="filterByCategory('Juice')">
+      <i class="fa-solid fas fa-blender"></i>
+      <div>
+        <div class="grayAndSmall">Cool</div>
+        <div class="boldClass">Bevarages</div>
+      </div>
     </div>
 
     <!-- <div class="breakfastContainer all">
@@ -85,19 +83,23 @@
             <div class="boldClass">Starters</div>
         </div>
     </div> -->
+  </div>
+</div>
 
-
-
+<div class="foodContainer">
+  <div class="foodCard" *ngFor="let food of filteredItems">
+    <img
+      src="{{ '\assets\\' + food.imgUrl }}"
+      alt="foodImg"
+      width="250px"
+      height="200px"
+    />
+    <div class="foodName">{{ food.name }}</div>
+    <div class="foodCost">{{ food.cost | currency : "INR" }}</div>
+    <div class="addCart">
+      <button class="btn btn-warning">
+        Buy <i class="fa-solid fas fa-cart-plus"></i>
+      </button>
     </div>
   </div>
-
-  <div class="foodContainer">
-    <div class="foodCard" *ngFor="let food of getFoods">
-        <img src="{{'\assets\\'+food.imgUrl}}" alt="foodImg" width="250px" height="200px">
-        <div class="foodName">{{food.name}}</div>
-        <div class="foodCost">{{food.cost |currency:'INR' }}</div>
-        <div class="addCart">
-            <button class="btn btn-warning">Buy <i class="fa-solid fas fa-cart-plus"></i> </button>
-        </div>
-    </div>
-  </div>
+</div>
