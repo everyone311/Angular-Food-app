@@ -1,46 +1,16 @@
-/* .container{
-    position: absolute;
-
-    width: 100%;
-    margin-top: 25px;
-    background-color:maroon;
-    
-    }
-    
-    .heading{
-        font-size: 35px;
-        padding-left: 650px;
-        color:whitesmoke
-    }
-    #details{
-        display: flex;
-        padding-left: 459px;
-        color:antiquewhite;
-    
-        
-
-    }
-    #adress,#phone,#email{
-        padding-left: 45px;
-        
-        
-    }
-    h4{
-        text-align: center;
-    }
-    .email{
-        height:2px;
-        width:2px
-    } */
 .footerContainer {
   background-color: brown;
+  width: 100%;
+}
+.footerContent a {
+  color: rgb(252, 240, 240);
+  text-decoration: none;
 }
 .firstFooterContainer {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-
-  max-height: 700px;
-  padding: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  min-height: 290px;
+  padding: 3.2rem;
 }
 .footerHeading {
   font-family: "Rubik";
@@ -59,17 +29,17 @@
   color: rgb(252, 240, 240);
 }
 .footerContent {
-  font-size: 23px;
+  font-size: 20px;
   font-family: "Rubik";
   padding: 10px;
   color: rgb(252, 240, 240);
 }
 
+
 .footerContent a{
   text-decoration: none;
   color: rgb(252, 240, 240);
 }
-
 
 .fa-twitter,
 .fa-facebook-f,
@@ -100,6 +70,7 @@
   color: rgb(222, 220, 220);
   font-family: "Rubik";
   padding-bottom: 20px;
+  padding-left: 10px;
 }
 .newsLetterBox {
   width: 300px;
@@ -125,4 +96,23 @@
   color: aliceblue;
   font-family: "Rubik";
   font-size: 20px;
+}
+.footerContent:hover {
+  font-size: 21px;
+}
+
+/* responsive */
+@media only screen and (max-width: 1330px) {
+  .firstFooterContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+@media only screen and (max-width: 1330px) {
+  .firstFooterContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
 }

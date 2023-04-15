@@ -4,7 +4,11 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ViewFoodsComponent } from './view-foods/view-foods.component';
+
 import { ContactUsComponent } from './contact-us/contact-us.component';
+
+import { AboutComponent } from './about/about.component';
+
 
 const routes: Routes = [
   { path: 'Login', component: LoginPageComponent },
@@ -12,6 +16,9 @@ const routes: Routes = [
   { path: 'Home', component: HomepageComponent },
   {path:'viewFoods',component:ViewFoodsComponent},
   {path:'ContactUs',component:ContactUsComponent},
+
+  {path:'about', component:AboutComponent},
+
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
 ];
 
