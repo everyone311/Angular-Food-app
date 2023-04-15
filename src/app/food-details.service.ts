@@ -11,7 +11,7 @@ export class FoodDetailsService {
         name: 'Indian Breakfast',
         cost: '100',
         imgUrl: 'indian-breakfast.jpg',
-        category: 'breakfast',
+        category: 'BreakFast',
       },
       {
         name: 'Coffee',

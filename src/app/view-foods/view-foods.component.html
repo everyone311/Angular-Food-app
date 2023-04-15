@@ -14,21 +14,21 @@
       </div>
     </div>
 
-    <div class="breakfastContainer popular">
+    <div class="breakfastContainer popular" (click)="filterByCategory('BreakFast')">
       <i class="fa-solid fa-mug-hot"></i>
       <div>
         <div class="grayAndSmall">Popular</div>
         <div class="boldClass">Breakfast</div>
       </div>
     </div>
-    <div class="breakfastContainer special">
+    <div class="breakfastContainer special" (click)="filterByCategory('Lunch')">
       <i class="fa-solid fa-burger"></i>
       <div>
         <div class="grayAndSmall">Special</div>
         <div class="boldClass">Lunch</div>
       </div>
     </div>
-    <div class="breakfastContainer lovely">
+    <div class="breakfastContainer lovely" (click)="filterByCategory('Dinner')">
       <i class="fa-solid fa-apple-whole"></i>
       <div>
         <div class="grayAndSmall">Lovely</div>
