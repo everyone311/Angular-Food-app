@@ -5,6 +5,7 @@ import { RegisterPageComponent } from './register-page/register-page.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ViewFoodsComponent } from './view-foods/view-foods.component';
 import { AboutComponent } from './about/about.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 
 const routes: Routes = [
   { path: 'Login', component: LoginPageComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'Home', component: HomepageComponent },
   {path:'viewFoods',component:ViewFoodsComponent},
   {path:'about', component:AboutComponent},
+  {path:'terms&Conditions', component:TermsAndConditionsComponent},
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
 ];
 

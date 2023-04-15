@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ViewFoodsComponent } from './view-foods/view-foods.component';
 import { AboutComponent } from './about/about.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AboutComponent } from './about/about.component';
 
     ViewFoodsComponent,
       AboutComponent,
+      TermsAndConditionsComponent,
   ],
   imports: [
     BrowserModule,
