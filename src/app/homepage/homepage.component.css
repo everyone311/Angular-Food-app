@@ -264,3 +264,24 @@ td {
     padding: 0;
   }
 }
+
+.CardScroll
+{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin: 15px;
+  justify-content: center;
+  font-family: 'DynaPuff', cursive;
+}
+
+.scrollText
+{
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 50%;
+}
+.scrollImg
+{
+  border-radius: 50%;
+}
