@@ -266,11 +266,22 @@ td {
     row-gap: 5rem;
   }
   .foodMenuTextContainer,
-.breakfastContainer {
-  display: inherit;
-  justify-content: center;
-}
+  .breakfastContainer {
+    display: inherit;
+    justify-content: center;
+  }
+  .foodMenuText {
+    color: #fea116;
+    font-family: cursive;
+    font-size: 25px;
+    padding-left: 8%;
+  }
+  .small-line {
+    border-bottom: 5px solid orange;
+    width:142px;
+    
 
+}
   .homeImageContainer {
     background-image: url("../../assets/wood-background.jpeg");
     background-size: cover;
@@ -310,8 +321,15 @@ td {
   }
   .foodMenuTextContainer,
 .breakfastContainer {
-  display: inherit;
+  display: grid;
   justify-content: center;
+}
+.popular{
+  width:100%
+}
+
+.small-line{
+  margin-left: 1%;
 }
 
 }
