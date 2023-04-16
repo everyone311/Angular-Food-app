@@ -252,6 +252,11 @@ td {
     justify-items: center;
     row-gap: 5rem;
   }
+  .foodMenuTextContainer,
+.breakfastContainer {
+  display: inherit;
+  justify-content: center;
+}
 
   .homeImageContainer {
     background-image: url("../../assets/wood-background.jpeg");
@@ -274,6 +279,9 @@ td {
     margin-bottom: 86px;
     padding-left: inherit;
   }
+  .Advertisement{
+    padding-top: 147px;
+  }
 
 }
 @media only screen and (max-width: 830px) {
@@ -284,6 +292,12 @@ td {
     justify-items: center;
     row-gap: 5rem;
   }
+  .foodMenuTextContainer,
+.breakfastContainer {
+  display: inherit;
+  justify-content: center;
+}
+
 }
 @media only screen and (max-width: 1195px) {
   .restaurant1 {
