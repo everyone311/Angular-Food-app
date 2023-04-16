@@ -26,6 +26,7 @@ export class ViewFoodsComponent {
       console.log('...', this.filteredItems);
     }
   }
+  
 
   getPrice(value:any)
   {

@@ -28,7 +28,10 @@
 .all:hover,
 .breakfast:hover,
 .lunch:hover,
-.dinner:hover
+.dinner:hover,
+.starter:hover,
+.juice:hover,
+.desserts:hover
 {
   border-color:orange ;
  
@@ -36,13 +39,16 @@
 .RegularMenu
 {
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-columns: 150px 150px 150px 150px 150px 150px 150px;
   justify-content: center;
+  margin: 15px;
 }
 .fa-concierge-bell,
 .fa-mug-hot,
 .fa-burger,
-.fa-apple-whole
+.fa-apple-whole,
+.fa-ice-cream,
+.fa-blender
 {
   color: orange;
   font-size: 37px;
@@ -50,7 +56,10 @@
 .Regular:hover > .fa-concierge-bell,
 .Regular:hover > .fa-mug-hot,
 .Regular:hover > .fa-burger,
-.Regular:hover > .fa-apple-whole
+.Regular:hover > .fa-apple-whole,
+.Regular:hover >  .fa-ice-cream,
+.Regular:hover > .fa-blender,
+.Regular:hover > .bbq
 {
   color: orange;
   font-size: 37px;
