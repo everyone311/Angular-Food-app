@@ -82,3 +82,24 @@ img
 {
     margin-top: 50px;
 }
+/* responsive*/
+@media   (max-width:1024px) {
+    .Image{
+        display: none;
+    }
+
+.Container
+{
+    box-shadow: 3px 12px 18px 5px lightgrey;
+    padding: 37px;
+    margin: 10px;
+}
+.MainContainer
+{
+    display: grid;
+    grid-template-columns: 283px 136px;
+    justify-content: center;
+    margin: 10px;
+    padding-left: 141px
+}
+}
