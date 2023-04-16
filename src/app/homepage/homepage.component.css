@@ -252,6 +252,11 @@ td {
     justify-items: center;
     row-gap: 5rem;
   }
+  .foodMenuTextContainer,
+.breakfastContainer {
+  display: inherit;
+  justify-content: center;
+}
 
   .homeImageContainer {
     background-image: url("../../assets/wood-background.jpeg");
@@ -274,6 +279,9 @@ td {
     margin-bottom: 86px;
     padding-left: inherit;
   }
+  .Advertisement{
+    padding-top: 147px;
+  }
 
 }
 @media only screen and (max-width: 830px) {
@@ -284,9 +292,36 @@ td {
     justify-items: center;
     row-gap: 5rem;
   }
+  .foodMenuTextContainer,
+.breakfastContainer {
+  display: inherit;
+  justify-content: center;
+}
+
 }
 @media only screen and (max-width: 1195px) {
   .restaurant1 {
     padding: 0;
   }
+}
+
+.CardScroll
+{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin: 15px;
+  justify-content: center;
+  font-family: 'DynaPuff', cursive;
+}
+
+.scrollText
+{
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 50%;
+}
+.scrollImg
+{
+  border-radius: 50%;
 }

@@ -51,4 +51,12 @@ a{
   padding-left: 11px;
   
 }
+@media(max-width:992px){
+  form{
+    padding-left: 4px;
+}
+input{
+  width:100%;
+}
+}
 
