@@ -315,6 +315,10 @@ td {
   width:100%
 }
 
+.small-line{
+  margin-left: 1%;
+}
+
 }
 @media only screen and (max-width: 1195px) {
   .restaurant1 {
