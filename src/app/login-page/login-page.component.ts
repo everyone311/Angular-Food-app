@@ -48,6 +48,7 @@ export class LoginPageComponent implements OnInit {
   }
 
   submit: boolean = false;
+  loginErrorMessage: string = '';
   onSubmit(): any {
     this.submit = true;
     console.log('Login ', this.loginForm.value);
@@ -59,11 +60,13 @@ export class LoginPageComponent implements OnInit {
       this.LoginService.AddUser(this.loginForm.value).subscribe(
         (res) => {
           console.log('Loggged in!', res);
+
+          this.ngZone.run(() => this.router.navigateByUrl('/Home'));
           this.loginForm.reset();
-          // this.ngZone.run(() => this.router.navigateByUrl('/Home'));
         },
         (err) => {
-          console.log(err);
+          console.log('Error in login res', err.error);
+          this.loginErrorMessage = err.error.error + '!!';
         }
       );
     } else {

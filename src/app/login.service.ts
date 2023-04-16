@@ -20,9 +20,19 @@ export class LoginService {
 
   AddUser(data: Login): Observable<any> {
     let API_URL = `${this.REST_API}/login`;
-    return this.httpClient
-      .post(API_URL, data)
-      .pipe(catchError(this.handleError));
+    return this.httpClient.post(API_URL, data).pipe(
+      catchError((error) => {
+        if (
+          error.status === 401 &&
+          error.error.message === 'Invalid credentials'
+        ) {
+          console.log('Invalid credentials:', error);
+        } else {
+          console.log('Other error:', error);
+        }
+        return throwError(error);
+      })
+    );
   }
 
   RegisterUser(data: Register): Observable<any> {
