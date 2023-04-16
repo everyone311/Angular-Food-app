@@ -1,0 +1,59 @@
+.privacyContent
+{
+    box-shadow: 3px 12px 18px 5px rgb(41, 39, 39);
+    background-color: aliceblue;
+    padding: 13px;
+    margin: 10px;
+    width:50%;
+    text-align: justify;
+    margin-left: 25%;
+    font-family: sans-serif;
+}
+.content{
+    padding-top: 39px;
+    padding-bottom: 66px;
+}
+.content p{
+    font-size: 25px;
+    font-style: oblique;
+}
+.card{
+    background-color: rgba(173, 176, 176, 0.114);
+}
+
+hr{
+    color: rgb(19, 17, 17);
+}
+
+h3{
+    font-weight: bold;
+}
+.informationCollect{
+    margin-left: 41px;
+    margin-right: 68px;
+    margin-bottom: 32px;
+} li{
+    padding-left:38px ;
+}
+.privacy{
+    display: flex;
+}
+img{
+    height: 50%;
+    width: 500px;
+}
+.image{
+    margin-right :37px;
+
+}
+@media(max-width:1200px){
+    img{
+        height: 497px;
+        width: 279px;
+        padding-top: 249px;
+    }
+    .image{
+        margin-right :37px;
+    
+    }
+  }

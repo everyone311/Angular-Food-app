@@ -15,6 +15,7 @@ import { ViewFoodsComponent } from './view-foods/view-foods.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutComponent } from './about/about.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-co
     ContactUsComponent,
     AboutComponent,
     TermsAndConditionsComponent,
+    PrivacyPolicyComponent,
   ],
   imports: [
     BrowserModule,
