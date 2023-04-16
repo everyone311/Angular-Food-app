@@ -3,17 +3,16 @@ input {
   border-radius: 10px;
   border-width: 2px;
   border-color: gold;
-  
 }
-input:hover{
+input:hover {
   width: 320px;
 }
-.text-danger{
+.text-danger {
   color: #d60000;
 }
 label {
   font-size: 30px;
-  color:rgb(243, 238, 232);
+  color: rgb(243, 238, 232);
   font-weight: bold;
 }
 .container {
@@ -31,32 +30,35 @@ label {
 }
 button {
   width: 150px;
-  height:35px;
+  height: 35px;
   font-size: 15px;
   border-radius: 25px;
 }
 
 form {
   padding-top: 118px;
-  padding-left: 60px;}
+  padding-left: 60px;
+}
 .body {
   background-color: beige;
 }
 p {
-  margin: 9px 23px 10px;
-  color:rgb(243, 238, 232); ;
+  padding: 10px 0px 0px 10px;
+  color: rgb(243, 238, 232);
 }
-a{
-  color:blue;
+a {
+  color: blue;
   padding-left: 11px;
-  
 }
-@media(max-width:992px){
-  form{
+@media (max-width: 992px) {
+  form {
     padding-left: 4px;
+  }
+  input {
+    width: 100%;
+  }
 }
-input{
-  width:100%;
+.errorMessage {
+  color: rgb(255, 255, 255);
+  padding: 5px;
 }
-}
-
