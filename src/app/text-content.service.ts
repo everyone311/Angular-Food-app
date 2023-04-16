@@ -31,4 +31,9 @@ export class TextContentService {
       {text:"Indemnification You agree to indemnify and hold 2 Hot and its affiliates, and their respective officers, directors, employees, agents, licensors, and suppliers harmless from any claim or demand, including reasonable attorneys' fees, made by any third party due to or arising out of your breach of these Terms and Conditions, your use of our website, or your violation of any law or the rights of a third party."}
     ]
   }
+  privacyPolicy():any[]{
+    return [
+      {text:'At 2 Hot, we take the privacy and security of your personal information seriously. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website to place orders for food or other products. By using our website, you agree to the terms of this Privacy Policy. '}
+    ]
+  }
 }
