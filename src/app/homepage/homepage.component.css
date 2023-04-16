@@ -288,9 +288,12 @@ td {
   .box-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    padding: 10rem;
+    padding: 1rem;
     justify-items: center;
     row-gap: 5rem;
+  }
+  .box {
+    width: 270px;
   }
   .foodMenuTextContainer,
 .breakfastContainer {
