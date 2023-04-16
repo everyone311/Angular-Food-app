@@ -241,7 +241,9 @@ td {
 
 /* responsive */
 
+
 @media  (min-width: 280px) and (max-width:1024px) {
+
   .box-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

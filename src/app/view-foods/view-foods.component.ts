@@ -25,4 +25,22 @@ export class ViewFoodsComponent {
       console.log('...', this.filteredItems);
     }
   }
+
+  getPrice(value:any)
+  {
+    console.log("button is clicked");
+    console.log(value.target.value);
+  }
+
+  cartVisible:boolean = false;
+
+  getCart()
+  {
+    this.cartVisible = true;
+  }
+
+  cartDisable()
+  {
+    return this.cartVisible = false;
+  }
 }
