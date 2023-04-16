@@ -5,6 +5,7 @@
   font-size: 32px;
   font-weight: bold;
   color: orange;
+  margin: 15px;
 }
 .small-line {
   border-bottom: 5px solid orange;
@@ -17,13 +18,15 @@
   font-weight: bold;
   display: flex;
   justify-content: center;
-  margin: 10px;
+  margin: 25px;
   
 }
 .Regular
 {
   text-align: center;
   border-bottom: 4px solid grey;
+  margin-top:15px;
+  margin-bottom: 15px;
 }
 .all:hover,
 .breakfast:hover,
