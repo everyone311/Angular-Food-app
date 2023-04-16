@@ -242,6 +242,7 @@ td {
 /* responsive */
 
 
+
 @media  (min-width: 280px) and (max-width:1024px) {
 
   .box-container {
@@ -251,6 +252,7 @@ td {
     justify-items: center;
     row-gap: 5rem;
   }
+
   .homeImageContainer {
     background-image: url("../../assets/wood-background.jpeg");
     background-size: cover;
@@ -272,6 +274,7 @@ td {
     margin-bottom: 86px;
     padding-left: inherit;
   }
+
 }
 @media only screen and (max-width: 830px) {
   .box-container {
@@ -280,7 +283,6 @@ td {
     padding: 10rem;
     justify-items: center;
     row-gap: 5rem;
-    padding-left: inherit;;
   }
 }
 @media only screen and (max-width: 1195px) {

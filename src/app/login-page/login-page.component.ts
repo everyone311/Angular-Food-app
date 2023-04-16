@@ -6,9 +6,8 @@ import {
   FormGroup,
   Validators,
   FormBuilder,
-  AbstractControl,
 } from '@angular/forms';
-import { asyncValidator } from '../login-validation';
+
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -40,10 +39,6 @@ export class LoginPageComponent implements OnInit {
   }
   ngOnInit(): void {}
 
-  // get f(): { [key: string]: AbstractControl } {
-  //   return this.loginForm.controls;
-  // }
-
   get UsernameValidate() {
     return this.loginForm.get('username');
   }
@@ -55,19 +50,16 @@ export class LoginPageComponent implements OnInit {
   submit: boolean = false;
   onSubmit(): any {
     this.submit = true;
-    console.log('Login ');
-    console.log(this.loginForm.valid);
-    console.log(this.UsernameValidate && this.password);
-    console.log(this.UsernameValidate);
-    console.log(this.password);
+    console.log('Login ', this.loginForm.value);
 
     if (
       this.UsernameValidate?.status === 'VALID' &&
       this.password?.status === 'VALID'
     ) {
       this.LoginService.AddUser(this.loginForm.value).subscribe(
-        () => {
-          console.log('Loggged in!');
+        (res) => {
+          console.log('Loggged in!', res);
+          this.loginForm.reset();
           // this.ngZone.run(() => this.router.navigateByUrl('/Home'));
         },
         (err) => {
