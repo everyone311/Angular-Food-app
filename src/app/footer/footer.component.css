@@ -2,10 +2,14 @@
   background-color: brown;
   width: 100%;
 }
+.footerContent a {
+  color: rgb(252, 240, 240);
+  text-decoration: none;
+}
 .firstFooterContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  min-height: 700px;
+  min-height: 290px;
   padding: 3.2rem;
 }
 .footerHeading {
@@ -28,6 +32,12 @@
   font-size: 20px;
   font-family: "Rubik";
   padding: 10px;
+  color: rgb(252, 240, 240);
+}
+
+
+.footerContent a{
+  text-decoration: none;
   color: rgb(252, 240, 240);
 }
 
@@ -92,17 +102,50 @@
 }
 
 /* responsive */
-@media only screen and (max-width: 1330px) {
+@media only screen and (min-width: 768px) {
   .firstFooterContainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: left;
   }
+  .newsLetterContent {
+    color: rgb(222, 220, 220);
+    font-family: "Rubik";
+    padding-bottom: 20px;
+    padding-left: inherit;
+  }
+  
 }
-@media only screen and (max-width: 1330px) {
+@media only screen and (min-width: 280px) {
   .firstFooterContainer {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
+    grid-template-columns: repeat(1,1fr);
+    justify-items: left;
+  }
+  .newsLetterContent {
+    color: rgb(222, 220, 220);
+    font-family: "Rubik";
+    padding-bottom: 20px;
+    padding-left: inherit;
+  }
+  
+}
+@media only screen and (min-width: 540px) {
+  .firstFooterContainer {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: left;
+    margin-left: 0px;
+  }
+  .newsLetterContent {
+    width: 169px;
+    color: rgb(222, 220, 220);
+    font-family: "Rubik";
+    padding-bottom: 20px;
+    padding-left: inherit;
+    
+  }
+  .newsLetterBox{
+    width: 177px;
   }
 }
