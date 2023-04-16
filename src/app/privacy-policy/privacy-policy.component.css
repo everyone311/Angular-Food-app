@@ -48,12 +48,11 @@ img{
 }
 @media(max-width:1200px){
     img{
-        height: 497px;
-        width: 279px;
-        padding-top: 249px;
+        display: none;
     }
-    .image{
-        margin-right :37px;
-    
+    .informationCollect{
+    margin-left: 41px;
+    margin-right: 0px;
+    margin-bottom: 32px
     }
-  }
+}
