@@ -35,6 +35,12 @@
   color: rgb(252, 240, 240);
 }
 
+
+.footerContent a{
+  text-decoration: none;
+  color: rgb(252, 240, 240);
+}
+
 .fa-twitter,
 .fa-facebook-f,
 .fa-youtube,

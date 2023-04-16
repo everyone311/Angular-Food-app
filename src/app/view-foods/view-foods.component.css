@@ -1,84 +1,89 @@
-.foodMenuTextContainer,
-.breakfastContainer {
+.foodMenuTextContainer
+{
   display: flex;
   justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: orange;
 }
-.breakfastContainer {
-  padding-bottom: 20px;
-  border-bottom: 4px solid gray;
-}
-.popular:hover,
-.special:hover,
-.lovely:hover,
-.all:hover {
-  border-bottom: 4px solid orange;
- 
-}
-/* .breakfastContainer:hover
-{
-    transform: scale(1.1);
-    transition: 0.4s;
-    box-shadow: 0px 3px 10px 0px grey;
-    padding: 5px;
-    border-radius: 5px;
-} */
 .small-line {
   border-bottom: 5px solid orange;
-  width: 50px;
-  margin: 10px;
+  width: 40px;
+  margin: 15px ;
 }
-.foodMenuContainer {
-  width: 500px;
-  height: 300px;
-  background-color: #ffffff;
-  margin: auto;
-  padding: 20px;
-  /* box-shadow: 0px 0px 9px 9px rgba(149, 148, 148, 0.1); */
-}
-.foodMenuText {
-  color: #fea116;
-  font-family: cursive;
-  font-size: 25px;
-}
-.popularItems {
-  color: #0f172b;
+.popularItems
+{
+  font-size: 40px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  padding: 40px 0px 40px 0px;
-  font-size: 45px;
-  font-style: italic;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  
 }
+.Regular
+{
+  text-align: center;
+  border-bottom: 4px solid grey;
+}
+.all:hover,
+.breakfast:hover,
+.lunch:hover,
+.dinner:hover
+{
+  border-color:orange ;
+ 
+}
+.RegularMenu
+{
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  justify-content: center;
+}
+.fa-concierge-bell,
 .fa-mug-hot,
 .fa-burger,
-.fa-apple-whole,
-.fa-concierge-bell,
-.fa-blender,
-.fa-ice-cream {
-  color: #fea116;
-  font-size: 40px;
-  padding: 10px;
-}
-.fa-mug-hot:hover,
-.fa-burger:hover,
-.fa-apple-whole:hover,
-.fa-concierge-bell:hover,
-.fa-blender:hover,
-.fa-ice-cream:hover
+.fa-apple-whole
 {
-    transform: scale(1.5);
-    transition: 0.4s;
+  color: orange;
+  font-size: 37px;
 }
-.grayAndSmall {
-  color: rgb(170, 168, 168);
-  font: 18px;
+.Regular:hover > .fa-concierge-bell,
+.Regular:hover > .fa-mug-hot,
+.Regular:hover > .fa-burger,
+.Regular:hover > .fa-apple-whole
+{
+  color: orange;
+  font-size: 37px;
+  transform: scale(1.4);
+  transition: 0.3s;
 }
-.foodMenuFooterContainer {
-  display: grid;
-  grid-template-columns: 150px 150px 150px 150px 150px 150px 150px;
+
+
+.PopularMenu
+{
+  display: flex;
   justify-content: center;
-  /* padding: 40px; */
+  gap: 2rem;
+  margin: 13px;
 }
+.Special
+{
+  text-align: center;
+}
+.splMenu
+{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.splMenu:hover
+{
+  box-shadow: 0px 7px 12px 0px grey;
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+/* css for food card  */
 
 .foodCard
 {
@@ -108,10 +113,138 @@
     margin: 5px;
 
 }
+.FoodMenuBar
+{
+  z-index: 1;
+}
 .foodContainer
 {
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
     gap: 3.5rem;
     margin: 10px;
+    justify-content: center;
+}
+
+.breakfastContainer .imgIcon
+{
+  border-radius:50px;
+  width: 100px;
+  height: 100px;
+}
+.btn-warning
+{
+  background-color: orange;
+}
+.Cart
+{
+  width: 400px;
+  padding: 5px;
+  z-index: 4;
+  float: right;
+  background-color: whitesmoke;
+  box-shadow: 0px 5px 10px 0px black;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.cartName
+{
+  text-align: center;
+  padding: 5px;
+  background-color:orange;
+  font-weight: bold;
+}
+.SelectedItem
+{
+  display: flex;
+  justify-content: center;
+}
+table
+{
+  text-align: center;
+  margin: 10px;
+  width: 380px;
+}
+td,th
+{
+  padding: 5px;
+  text-align: center;
+}
+.selected-item
+{
+  /* border: 1px solid black; */
+  margin: 10px;
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 0px 4px 10px 0px grey;
+}
+
+.selectedItemName
+{
+  display: grid;
+  grid-template-columns: 50px 50px;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.itemName
+{
+margin-top: 10px;
+}
+.selectedItemImg
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.TotalPrice
+{
+  display: grid;
+  grid-template-columns: 180px 180px;
+  margin: 10px;
+  width: 380px;
+}
+.TotName
+{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+.TotAmt
+{
+ text-align: right;
+ margin-right: 20px;
+ color: red;
+ font-weight: bold;
+}
+.MyCart
+{
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  position: fixed;
+  left: 88.5%;
+  top: 15%;
+}
+.CartButton
+{
+  padding: 10px;
+  font-size: 23px;
+}
+.totItem
+{
+  display: inline-block;
+}
+.Buttons
+{
+  display: grid;
+  grid-template-columns: 100px 100px;
+  gap: 2rem;
+  justify-content: center;
+}
+.btn-danger, .btn-success
+{
+  font-size: 21px;
 }

@@ -1,4 +1,4 @@
-<div class="foodMenuContainer">
+<!-- <div class="foodMenuContainer">
   <div class="foodMenuTextContainer">
     <div class="small-line"></div>
     <div class="foodMenuText">Food Menu</div>
@@ -14,21 +14,21 @@
       </div>
     </div>
 
-    <div class="breakfastContainer popular">
+    <div class="breakfastContainer popular" (click)="filterByCategory('BreakFast')">
       <i class="fa-solid fa-mug-hot"></i>
       <div>
         <div class="grayAndSmall">Popular</div>
         <div class="boldClass">Breakfast</div>
       </div>
     </div>
-    <div class="breakfastContainer special">
+    <div class="breakfastContainer special" (click)="filterByCategory('Lunch')">
       <i class="fa-solid fa-burger"></i>
       <div>
         <div class="grayAndSmall">Special</div>
         <div class="boldClass">Lunch</div>
       </div>
     </div>
-    <div class="breakfastContainer lovely">
+    <div class="breakfastContainer lovely" (click)="filterByCategory('Dinner')">
       <i class="fa-solid fa-apple-whole"></i>
       <div>
         <div class="grayAndSmall">Lovely</div>
@@ -36,24 +36,9 @@
       </div>
     </div>
 
-    <!-- <div class="breakfastContainer all">
-        <i class="fa-solid fa-concierge-bell"></i>
-        <div>
-            <div class="grayAndSmall">Popular</div>
-            <div class="boldClass">Indian</div>
-        </div>
-    </div>
-
-    <div class="breakfastContainer all">
-        <i class="fa-solid fa-concierge-bell"></i>
-        <div>
-            <div class="grayAndSmall">Popular</div>
-            <div class="boldClass">Chinese</div>
-        </div>
-    </div> -->
-
     <div class="breakfastContainer all" (click)="filterByCategory('Starter')">
-      <i class="fa-solid fa-concierge-bell"></i>
+       <i class="fa-solid fa-concierge-bell"></i> 
+      <img src="\assets\orange.png" alt="" class="imgIcon" >
       <div>
         <div class="grayAndSmall">Exclusive</div>
         <div class="boldClass">Starters</div>
@@ -76,29 +61,143 @@
       </div>
     </div>
 
-    <!-- <div class="breakfastContainer all">
-        <i class="fa-solid fa-concierge-bell"></i>
-        <div>
-            <div class="grayAndSmall">Popular</div>
-            <div class="boldClass">Starters</div>
-        </div>
-    </div> -->
+  </div>
+</div> -->
+
+<div class="Container">
+  <div class="PageHeader">
+    <div class="foodMenuTextContainer">
+      <div class="small-line"></div>
+      <div class="foodMenuText">Food Menu</div>
+      <div class="small-line"></div>
+    </div>
+    <div class="popularItems">Most Popular Items</div>
+  </div>
+</div>
+
+<div class="MyCart">
+  <button class="CartButton btn btn-warning" (click)="getCart()" (dblclick)="cartDisable()">My Cart <span id="totItem">( 0 )</span></button>
+
+  <div class="Cart" *ngIf="cartVisible">
+    <div class="cartName">My Cart</div>
+    <div class="SelectedItem">
+      <!-- <div class="itemImage">image</div>
+    <div class="itemName">Name</div>
+    <div class="itemCost">Cost</div>
+    <div class="itemQuantity">Quantity</div>
+    <div class="total">total</div> -->
+      <table>
+       
+          <!-- <tr>
+            <th>Name</th>
+            <th>Cost</th>
+            <th>Quantity</th>
+          </tr> -->
+          <tr class="selected-item">
+            <td>
+              <div class="selectedItemName">
+                <div class="itemImage"><img src="\assets\coffee.png" class="selectedItemImg" alt=""></div>
+                <div class="itemName">name</div>
+              </div>
+            </td>
+            <td>cost</td>
+            <td>Quantity</td>
+          </tr>
+          <br>
+          <tr class="selected-item">
+            <td>
+              <div class="selectedItemName">
+                <div class="itemImage"><img src="\assets\coffee.png" class="selectedItemImg" alt=""></div>
+                <div class="itemName">name</div>
+              </div>
+            </td>
+            <td>cost</td>
+            <td>Quantity</td>
+          </tr>
+          
+      </table>
+    </div>
+    <div class="TotalPrice">
+      <div class="TotName">Total Amount</div>
+      <div class="TotAmt">{{00.00 | currency:'INR'}}</div>
+    </div>
+    <div class="Buttons">
+      <button class="btn btn-danger">Cancel</button>
+      <button class="btn btn-success">Confirm</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="FoodMenuBar">
+  <div class="RegularMenu">
+    <div class="Regular all" (click)="filterByCategory('All')">
+      <i class="fa-solid fa-concierge-bell"></i>
+      <div class="Text">All Foods</div>
+    </div>
+    <div class="Regular breakfast" (click)="filterByCategory('BreakFast')">
+      <i class="fa-solid fa-mug-hot"></i>
+      <div class="Text">Breakfast</div>
+    </div>
+    <div class="Regular lunch">
+      <i class="fa-solid fa-burger" (click)="filterByCategory('Lunch')"></i>
+      <div class="Text">Lunch</div>
+    </div>
+    <div class="Regular dinner">
+      <i class="fa-solid fa-apple-whole" (click)="filterByCategory('Dinner')"></i>
+      <div class="Text">Dinner</div>
+    </div>
+
+
+  </div>
+
+  <div class="PopularMenu">
+    <div class="Special pizza">
+      <img src="\assets\NavBar\pizza.jpg" alt="" class="splMenu">
+      <div class="foodName">Pizza</div>
+    </div>
+
+    <div class="Special chicken">
+      <img src="\assets\NavBar\chicken.jpg" alt="" class="splMenu">
+      <div class="foodName">Chicken</div>
+    </div>
+
+    <div class="Special biriyani">
+      <img src="\assets\NavBar\biriyani.jpg" alt="" class="splMenu">
+      <div class="foodName">Biriyani</div>
+    </div>
+
+    <div class="Special fried-rice">
+      <img src="\assets\NavBar\fried-rice.jpg" alt="" class="splMenu">
+      <div class="foodName">Fried Rice</div>
+    </div>
+
+    <div class="Special burger">
+      <img src="\assets\NavBar\burger.jpg" alt="" class="splMenu">
+      <div class="foodName">Burger</div>
+    </div>
+
+    <div class="Special idly">
+      <img src="\assets\NavBar\idly.jpg" alt="" class="splMenu">
+      <div class="foodName">Idly</div>
+    </div>
+
+    <div class="Special dosa">
+      <img src="\assets\NavBar\dosa.jpg" alt="" class="splMenu">
+      <div class="foodName">Dosa</div>
+    </div>
+
   </div>
 </div>
 
 <div class="foodContainer">
   <div class="foodCard" *ngFor="let food of filteredItems">
-    <img
-      src="{{ '\assets\\' + food.imgUrl }}"
-      alt="foodImg"
-      width="250px"
-      height="200px"
-    />
+    <img src="{{ '\assets\\' + food.imgUrl }}" alt="foodImg" width="250px" height="200px" />
     <div class="foodName">{{ food.name }}</div>
     <div class="foodCost">{{ food.cost | currency : "INR" }}</div>
     <div class="addCart">
-      <button class="btn btn-warning">
-        Buy <i class="fa-solid fas fa-cart-plus"></i>
+      <button class="btn btn-warning" value="{{food.cost}}" (click)="getPrice($event)">
+        Add to cart <i class="fa-solid fas fa-cart-plus"></i>
       </button>
     </div>
   </div>

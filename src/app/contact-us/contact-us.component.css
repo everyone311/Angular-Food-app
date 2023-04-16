@@ -1,0 +1,101 @@
+.Header
+{
+    font-size: 38px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+.MainContainer
+{
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 750px 520px;
+    justify-content: center;
+    margin: 10px;
+}
+.Container
+{
+    box-shadow: 3px 12px 18px 5px lightgrey;
+    padding: 13px;
+    margin: 10px;
+}
+[class*='Pty']
+{
+    font-weight: bold;
+    font-size: 26px;
+}
+[class*='Text']
+{
+    text-indent: 20px;
+    margin-top: 5px;
+}
+.ContactText
+{
+    margin-bottom: 10px;
+}
+.SocialMediaIcon
+{
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px;
+    justify-content: center;
+    font-size: 30px;
+}
+.fa-brands
+{
+    font-size: 30px;
+    text-align: center;
+}
+
+ .fa-twitter:hover
+{
+    transform: scale(1.5);
+    transition: 0.3s;
+    color: rgb(76, 164, 247);
+    
+}
+.fa-facebook-f:hover
+{
+    transform: scale(1.5);
+    transition: 0.3s;
+    color: rgb(14, 17, 221);
+}
+
+.fa-youtube:hover
+{
+    transform: scale(1.5);
+    transition: 0.3s;
+    color: red;
+}
+
+.fa-instagram:hover
+{
+    transform: scale(1.5);
+    transition: 0.3s;
+    color: rgb(224, 12, 224);
+
+}
+img
+{
+    margin-top: 50px;
+}
+/* responsive*/
+@media   (max-width:1024px) {
+    .Image{
+        display: none;
+    }
+
+.Container
+{
+    box-shadow: 3px 12px 18px 5px lightgrey;
+    padding: 37px;
+    margin: 10px;
+}
+.MainContainer
+{
+    display: grid;
+    grid-template-columns: 283px 136px;
+    justify-content: center;
+    margin: 10px;
+    padding-left: 141px
+}
+}
