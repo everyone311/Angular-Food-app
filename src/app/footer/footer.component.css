@@ -102,7 +102,9 @@
 }
 
 /* responsive */
+
 @media only screen and (min-width: 820px) {
+
   .firstFooterContainer {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -116,9 +118,26 @@
   }
   
 }
+
+@media only screen and (min-width: 280px) {
+  .firstFooterContainer {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-items: left;
+  }
+  .newsLetterContent {
+    color: rgb(222, 220, 220);
+    font-family: "Rubik";
+    padding-bottom: 20px;
+    padding-left: inherit;
+  }
+  
+}
+
 @media only screen and (max-width: 668px) {
   .firstFooterContainer {
     display:inherit;
+
     grid-template-columns: repeat(2, 1fr);
     justify-items: left;
     margin-left: 0px;
