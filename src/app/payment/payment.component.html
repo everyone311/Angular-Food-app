@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="payment">
+        <form [formGroup]="form" (ngSubmit)="onsubmit()">
+            <div class="form-group">
+                <label>Customer Name</label>
+                <input type="text" formControlName="cname" class="form-control"
+                    [ngClass]="{'is-valid':submit && f['cname].errors']}" />
+                <div *ngIf="submit && f['cname'].errors" class="invalid-feedback">
+                    <div *ngIf=" f['cname'].errors['required']" class="text-danger">Customername is Required</div>
+                </div>
+
+            </div>
+
+            <div class="form-gontrol">
+                <label for="Phone">Phone</label>
+                <input type="number" class="form-control" id="phone" formControlName="p.no"
+                 [ngClass]="{'is-valid':submit && f['pno].errors']}" />
+                <div *ngIf="submit && f['pno'].errors" class="invalid-feedback">
+                    <div *ngIf=" f['pno'].errors['required']" class="text-danger">Phone Number is Required</div>
+                    <div *ngIf=" f['pno'].errors['minLength']" class="text-danger">Phone Number is Short</div>
+                    <div *ngIf=" f['pno'].errors['maxLength']" class="text-danger">Phone Number is long</div>
+                </div>
+
+            </div>
+             <div class="form-gontrol">
+                <label for="price">Total Price</label>
+                <input type="number" class="form-control" formControlName="price"
+                [ngClass]="{'is-valid':submit && f['price].errors']}" />
+                <div *ngIf="submit && f['price'].errors" class="invalid-feedback">
+                    <div *ngIf=" f['price'].errors['required']" class="text-danger">Phone Number is Required</div>
+                    
+                </div>
+            </div>
+            <div class="form-gontrol">
+                <label for="address">Address</label>
+                <input type="text-box" class="form-control" id="address" formControlName="address"
+                [ngClass]="{'is-valid':submit && f['address].errors']}" />
+                <div *ngIf="submit && f['address'].errors" class="invalid-feedback">
+                    <div *ngIf=" f['address'].errors['required']" class="text-danger">Address is Required</div>
+                    
+                </div>
+     
+                
+            </div>
+            <label>Payment Method</label>
+            <div>
+
+                <button type="submit" class="btn btn-primary btn-lg active">Cash On Delivery</button>
+                <button type="submit" class="btn btn-secondary btn-lg active">Online Payment</button>
+
+            </div>
+        </form>
+    </div>
+</div>

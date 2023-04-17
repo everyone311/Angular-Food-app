@@ -16,6 +16,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutComponent } from './about/about.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     AboutComponent,
     TermsAndConditionsComponent,
     PrivacyPolicyComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,
