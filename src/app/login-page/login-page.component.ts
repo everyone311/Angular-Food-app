@@ -61,6 +61,8 @@ export class LoginPageComponent implements OnInit {
         (res) => {
           console.log('Loggged in!', res);
 
+          localStorage.setItem('user', res.user.username);
+
           this.ngZone.run(() => this.router.navigateByUrl('/Home'));
           this.loginForm.reset();
         },

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import { FoodDetailsService } from '../food-details.service';
+import { Router } from '@angular/router';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -11,7 +12,12 @@ export class ViewFoodsComponent {
   getFoods: any[] = [];
   filteredItems: any[] = [];
 
-  constructor(private _getFoods: FoodDetailsService, private fb: FormBuilder) {
+  constructor(
+    private _getFoods: FoodDetailsService,
+    private fb: FormBuilder,
+    private router: Router,
+    private ngZone: NgZone
+  ) {
     this.getFoods = _getFoods.getFoods();
     this.filteredItems = this.getFoods;
   }
@@ -45,22 +51,28 @@ export class ViewFoodsComponent {
   totalAmount: number = 0;
 
   addToCart(item: any) {
-    const index = this.CartArray.findIndex(
-      (cartItem) => cartItem.id === item.id
-    );
-    if (index === -1) {
-      const newItem = { ...item, qty: 1 };
-      this.CartArray.push(newItem);
-      this.SelectedItem++;
-    } else {
-      this.CartArray[index].qty++;
-      this.SelectedItem++;
-    }
+    const localUser = localStorage.getItem('user');
+    console.log(localUser, 'localUser');
 
-    this.totalAmount = this.CartArray.reduce(
-      (acc, curr) => acc + curr.cost * curr.qty,
-      0
-    );
+    if (localUser !== null) {
+      const index = this.CartArray.findIndex(
+        (cartItem) => cartItem.id === item.id
+      );
+      if (index === -1) {
+        const newItem = { ...item, qty: 1 };
+        this.CartArray.push(newItem);
+        this.SelectedItem++;
+      } else {
+        this.CartArray[index].qty++;
+        this.SelectedItem++;
+      }
+      this.totalAmount = this.CartArray.reduce(
+        (acc, curr) => acc + curr.cost * curr.qty,
+        0
+      );
+    } else {
+      this.ngZone.run(() => this.router.navigateByUrl('/Login'));
+    }
   }
 
   cancelButton() {
@@ -69,16 +81,32 @@ export class ViewFoodsComponent {
     this.SelectedItem = 0;
     this.cartVisible = false;
   }
+  confirmButton() {
+    if (this.SelectedItem === 0) {
+      alert('Please add any itme to order!!');
+    } else {
+      alert('Your Order Confirmed!!');
+    }
+  }
 
   addBtn(item: any, qty: number, cost: number) {
     item.qty++;
     this.totalAmount += cost;
+    this.SelectedItem++;
   }
 
   subBtn(item: any, qty: number, cost: number) {
-    if (qty > 1) {
+    if (qty > 0) {
       item.qty--;
       this.totalAmount -= cost;
+      this.SelectedItem--;
+    }
+    if (item.qty <= 0) {
+      const index = this.CartArray.indexOf(item);
+      if (index > -1) {
+        this.CartArray.splice(index, 1);
+        // this.SelectedItem--;
+      }
     }
   }
 }
