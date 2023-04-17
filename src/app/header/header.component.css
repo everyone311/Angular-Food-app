@@ -20,20 +20,19 @@ img {
   margin-top: -87px;
   margin-left: -42px;
 }
-h2{
+h2 {
   margin: -104px 0 10px;
   margin-left: 101px;
-  font-family: 'DynaPuff', cursive;
+  font-family: "DynaPuff", cursive;
 }
-a
-{
+a {
   text-decoration: none;
   color: white;
 }
-.rightHeader a:hover
-{
+.rightHeader a:hover {
   transition: 0.1s;
-  border-bottom: 5px solid white;
+  border-bottom: 5px solid rgb(243, 181, 49);
+  color: rgb(243, 181, 49);
 
   scale: 2;
 }
@@ -53,19 +52,20 @@ a
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color:  brown;
+  background-color: brown;
   color: white;
   padding: 20px 10px 10px 10px;
   box-shadow: 0px 0px 0px 1.5px rgb(197, 197, 163);
 }
-  .toggle_btn{
-    float: right;
-    font-size: 1.5rem;
-    cursor:pointer;
-    display:none;
-    padding-right: 38px;
-    padding-top: 15px;
-  }
+.toggle_btn {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  padding-right: 38px;
+  padding-top: 15px;
+}
+
   /*responsive design*/
   @media(max-width:992px){
     .rightHeader{
@@ -78,11 +78,9 @@ a
       margin-right: -257px;
       display: none;
     }
-    .rightHeader a:hover
-{
-  border:none;
-
-}
+    .rightHeader a:hover{
+     border:none;
+    }
     .navbar a{
       display: block;
 
@@ -93,7 +91,5 @@ a
    .menuClass{
     right: 244px;
     display: block;
-
-   }
-
   }
+}
