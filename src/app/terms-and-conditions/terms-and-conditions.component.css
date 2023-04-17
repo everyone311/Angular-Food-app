@@ -1,0 +1,37 @@
+.Header
+{
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 30px;
+}
+hr
+{
+    border: 2px solid grey;
+    
+}
+.TermsAndCondition
+{
+    display: grid;
+    grid-template-columns: 600px 500px;
+    justify-content: center;
+    gap: 3rem;
+    margin: 20px 0px 20px 0px;
+}
+.Image
+{
+    text-align: center;
+    display: grid;
+    gap:5rem;
+}
+.Img
+{
+    text-align: center;
+    margin-top: 30px;
+}
+li
+{
+    text-indent: 5px;
+    margin-bottom: 10px;
+}

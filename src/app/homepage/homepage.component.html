@@ -1,29 +1,13 @@
 <div class="homeImageContainer">
   <div class="textContainer">
-    <i class="imgText">Welcome to 2 hot to experience mouthful of 2oast</i>
-    <!-- <div class="imgParagraph"> -->
-    <!-- <table>
-        <tr>
-          <td>2 hot to handle. 2 hot to eat. How are you gonna face it</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Just 1 click, 2 choose, 3 open a door to get your hot food</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Free delivery upto 1500 .</td>
-          <td></td>
-        </tr>
-      </table> -->
-    <!-- </div> -->
+    <i class="imgText">Welcome to <span> 2 HOT </span>to experience <br> mouthful of 2oast</i>
     <div class="imgParagraph">
       <div>
         <i class="fa-solid fa-mug-hot"></i>Hot to handle. 2 hot to eat. How are
         you gonna face it!!
       </div>
       <div class="deliveryText">
-        <img src="../../assets/food-delivery.png" class="foodDeliveryimg" />Free
+        <img src="../../assets/food-delivery-2.png" class="foodDeliveryimg" />Free
         delivery upto 1500 amd delivery within 30mins
       </div>
 
@@ -161,7 +145,7 @@
           </div>
         </div>
         <div class="buttonContainer">
-          <a class="btn btn-primary py-3 px-5 mt-2 readmoreButton" href=""
+          <a class="btn btn-primary py-3 px-5 mt-2 readmoreButton" href="" [routerLink]="['/about']"
             >Read More</a
           >
         </div>
@@ -178,13 +162,16 @@
   </div>
   <div class="popularItems">Most Popular Items</div>
   <div class="foodMenuFooterContainer">
+    <a href="" [routerLink]="['/viewFoods']">
     <div class="breakfastContainer popular">
       <i class="fa-solid fa-mug-hot"></i>
       <div>
         <div class="grayAndSmall">Popular</div>
         <div class="boldClass">Breakfast</div>
-      </div>
-    </div>
+      </div> 
+    </div> 
+  </a>
+  <a href="" [routerLink]="['/viewFoods']">
     <div class="breakfastContainer special">
       <i class="fa-solid fa-burger"></i>
       <div>
@@ -192,6 +179,8 @@
         <div class="boldClass">Launch</div>
       </div>
     </div>
+</a>
+    <a href="" [routerLink]="['/viewFoods']">
     <div class="breakfastContainer lovely">
       <i class="fa-solid fa-apple-whole"></i>
       <div>
@@ -199,66 +188,28 @@
         <div class="boldClass">Dinner</div>
       </div>
     </div>
+  </a>
   </div>
+
 </div>
 
-<div class="showItemsContainer">
-  <div class="flexClass">
-    <div>
-      <img
-        src="../../assets/breakfastimage1 (1).jpg"
-        style="height: 100px; width: 100px"
-      />
-    </div>
 
-    <div>
-      <div>Hi</div>
-
-      <div>Hsdnwq wendw</div>
-    </div>
-
-    <div>$10</div>
+<div class="Advertisement">
+  <marquee behavior="scroll" direction="left">
+  <div class="CardScroll">
+    <div><img src="\assets\scrollGif.gif" alt="" width="250px" height="250px" class="scrollImg"></div>
+    <div><img src="\assets\Desserts\chinese-cheese-cake.jpg" alt="" class="scrollImg" width="250px" height="250px"></div>
+    <div class="scrollText">All Types Of Food</div>
+    <div><img src="\assets\Breakfast\red-gabbage-salad.jpg" alt="" class="scrollImg" width="250px" height="250px"></div>
+    <div class="scrollText">Far More Variety</div>
+    <div><img src="\assets\pizza.webp" alt="" width="250px" class="scrollImg" height="250px"></div>
+    <div class="scrollText">Explore the Taste</div>
+    <div><img src="\assets\ice-cream-2.png" alt="" class="scrollImg" width="250px" height="250px"></div>
+    <div><img src="\assets\chef.gif" alt="" width="250px" height="250px" class="scrollImg"></div>
   </div>
-  <div class="flexClass">
-    <div>
-      <img
-        src="../../assets/breakfastimage1 (4).jpg"
-        style="height: 100px; width: 100px"
-      />
-    </div>
-
-    <div>
-      <div>Hi</div>
-      <div>Hsdnwq wendw</div>
-    </div>
-    <div>$10</div>
-  </div>
-  <div class="flexClass">
-    <div>
-      <img
-        src="../../assets/breakfastimage1 (3).jpg"
-        style="height: 100px; width: 100px"
-      />
-    </div>
-
-    <div>
-      <div>Hi</div>
-      <div>Hsdnwq wendw</div>
-    </div>
-    <div>$10</div>
-  </div>
-  <div class="flexClass">
-    <div>
-      <img
-        src="../../assets/breakfastimage1 (2).jpg"
-        style="height: 100px; width: 100px"
-      />
-    </div>
-
-    <div>
-      <div>Hi</div>
-      <div>Hsdnwq wendw</div>
-    </div>
-    <div>$10</div>
-  </div>
+</marquee>
 </div>
+
+
+<app-footer></app-footer>
+

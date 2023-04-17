@@ -1,21 +1,27 @@
 <div class="footerContainer">
   <div class="firstFooterContainer">
-    <div >
+    <div>
       <div class="footerHeading">Company</div>
       <div class="footerContent">
-        <i class="fa-solid fa-chevron-right"></i>About Us
+
+        <i class="fa-solid fa-chevron-right"></i>
+        <a [routerLink]="['/about']">About Us</a>
+
       </div>
       <div class="footerContent">
-        <i class="fa-solid fa-chevron-right"></i>Contact Us
+        <i class="fa-solid fa-chevron-right"></i>
+        <a [routerLink]="['/ContactUs']">Contact Us</a>
       </div>
       <!-- <div class="footerContent">
         <i class="fa-solid fa-chevron-right"></i>Reservation
       </div> -->
       <div class="footerContent">
-        <i class="fa-solid fa-chevron-right"></i>Privacy Policy
+        <i class="fa-solid fa-chevron-right"></i>
+        <a [routerLink]="['/privacyPolicy']" >Privacy Policy</a>
       </div>
       <div class="footerContent">
-        <i class="fa-solid fa-chevron-right"></i>Terms & Condition
+        <i class="fa-solid fa-chevron-right"></i>
+        <a [routerLink]="['/terms&Conditions']">Terms & Condition</a>
       </div>
     </div>
     <div>

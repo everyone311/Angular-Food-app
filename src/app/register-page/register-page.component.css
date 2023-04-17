@@ -1,7 +1,6 @@
-
 input {
   width: 250px;
-  border-radius: 25px;
+  /* border-radius: 20px; */
 }
 label {
   font-size: 15px;
@@ -16,7 +15,6 @@ label {
 }
 .register-form {
   padding-left: 70%;
-  margin: 2px;
 }
 button {
   width: 250px;
@@ -25,13 +23,16 @@ button {
 }
 
 form {
-  padding-top: 89px;
+  padding-top: 65px;
   padding-bottom: 89px;
 }
 .body {
   background-color: beige;
 }
-p {
-  margin: 9px 17px 10px;
-
+p,
+.padding {
+  padding: 5px;
+}
+.size {
+  font-size: 18px;
 }
