@@ -1,101 +1,128 @@
 <div class="body">
-
   <div class="container">
     <div class="register-form">
-      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-          <label for="uname">Username</label><br />
-          <input
-            type="text"
-            formControlName="Uname"
-            class="form-control"
-            [ngClass]="{ 'is-invalid': submit && f['Uname'].errors }"
-          />
-          <div *ngIf="submit && f['Uname'].errors">
-            <div *ngIf="f['Uname'].errors['required']" class="text-danger">
-              User Name is required
-            </div>
+          <label for="username">Username</label><br />
+          <input type="text" formControlName="username" class="form-control" />
+
+          <div
+            *ngIf="username.errors?.['required'] &&( username.touched || username.dirty)"
+            class="text-danger size"
+          >
+            User Name is required
+          </div>
+          <div
+            *ngIf="username.errors?.['pattern'] &&( username.touched || username.dirty)"
+            class="text-danger size"
+          >
+            Name should start with alphabet
           </div>
         </div>
         <div class="form-group">
           <label for="email">Email</label><br />
-          <input
-            type="email"
-            formControlName="Email"
-            class="form-control"
-            [ngClass]="{ 'is-invalid': submit && f['Email'].errors }"
-          />
-          <div *ngIf="submit && f['Email'].errors">
-            <div *ngIf="f['Email'].errors['required']" class="text-danger">
-              Email is required
-            </div>
-            <div *ngIf="f['Email'].errors['email']" class="text-danger">
-              Email should be valid
-            </div>
+          <input type="email" formControlName="email" class="form-control" />
+
+          <div
+            *ngIf="email.errors?.['required'] && ( email.touched || email.dirty)"
+            class="text-danger size"
+          >
+            Email is required
+          </div>
+          <div
+            *ngIf="email.errors?.['email'] && ( email.touched || email.dirty)"
+            class="text-danger size"
+          >
+            Email should be valid
           </div>
         </div>
         <div class="form-group">
           <label for="phone">Phone Number</label><br />
-          <input
-            type="text"
-            formControlName="Pno"
-            class="form-control"
-            [ngClass]="{ 'is-invalid': submit && f['Pno'].errors }"
-          />
-          <div *ngIf="submit && f['Pno'].errors">
-            <div *ngIf="f['Pno'].errors['required']" class="text-danger">
-              Phone number is required
-            </div>
-            <div *ngIf="f['Pno'].errors['minlength']" class="text-danger">
-              Phone number should contain only 10 digit
-            </div>
-            <div *ngIf="f['Pno'].errors['maxlength']" class="text-danger">
-              Phone number should contain only 10 digit
-            </div>
+          <input type="text" formControlName="phone" class="form-control" />
+
+          <div
+            *ngIf="mobile.errors?.['required']&& ( mobile.touched || mobile.dirty)"
+            class="text-danger size"
+          >
+            Phone number is required
+          </div>
+          <div
+            *ngIf="mobile.errors?.['pattern']&& ( mobile.touched || mobile.dirty)"
+            class="text-danger size"
+          >
+            Number is Invalid
           </div>
 
-        </div>
-        <div class="form-group">
-          <label for="pWord">Password</label><br />
-          <input
-            type="pWord"
-            formControlName="pWord"
-            class="form-control"
-            [ngClass]="{ 'is-invalid': submit && f['pWord'].errors }"
-          />
-          <div *ngIf="submit && f['pWord'].errors">
-            <div *ngIf="f['pWord'].errors['required']" class="text-danger">
-              Pasword is required
-            </div>
-            <div *ngIf="f['pWord'].errors['pWord']" class="text-danger">
-              Password should be valid
-            </div>
+          <div
+            class="text-danger size"
+            *ngIf="mobile.errors?.['minlength']&& ( mobile.touched || mobile.dirty)"
+          >
+            Number is short
+          </div>
+          <div
+            *ngIf="mobile.errors?.['maxlength']&& ( mobile.touched || mobile.dirty)"
+            class="text-danger size"
+          >
+            Number is Long
           </div>
         </div>
         <div class="form-group">
-          <label for="cpWord">Re-Type Password</label><br />
+          <label for="password">Password</label><br />
           <input
-            type="cpWord"
-            formControlName="ccpWord"
+            type="password"
+            formControlName="password"
             class="form-control"
-            [ngClass]="{ 'is-invalid': submit && f['pWord'].errors }"
           />
-          <div *ngIf="submit && f['cpWord'].errors">
-            <div *ngIf="f['cpWord'].errors['required']" class="text-danger">
-              Pasword is required
-            </div>
-            <div *ngIf="f['cpWord'].errors['validation']" class="text-danger">
-              Password doesn't match.
-            </div>
+
+          <div
+            *ngIf="pwd.errors?.['required']&& ( pwd.touched || pwd.dirty)"
+            class="text-danger size"
+          >
+            Pasword is required
+          </div>
+          <div
+            *ngIf="pwd.errors?.['pattern']&& ( pwd.touched || pwd.dirty)"
+            class="text-danger size"
+          >
+            Password should be valid
+          </div>
+          <div
+            *ngIf="pwd.errors?.['minlength'] ||pwd.errors?.['maxlength'] && ( pwd.touched || pwd.dirty)"
+            class="text-danger size"
+          >
+            Password should be atleast 8 and maximum 12 chars
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="retypePassword">Re-Type Password</label><br />
+          <input
+            type="retypePassword"
+            formControlName="retypePassword"
+            class="form-control"
+          />
+
+          <div
+            *ngIf="cpwd.errors?.['required'] && (cpwd.touched || cpwd.dirty)"
+            class="text-danger size"
+          >
+            re-Type pasword is required
+          </div>
+          <div [ngStyle]="{ display: repeatPass }" class="text-danger size">
+            Password doesn't match.
           </div>
         </div>
         <br />
 
-        <button type="submit" class="btn btn-success">Register</button
-        ><br /><br />
+        <button
+          type="submit"
+          class="btn btn-success"
+          [disabled]="regForm.invalid"
+        >
+          Register
+        </button>
+        <div class="text-success padding">{{ successMessage }}</div>
         <p>Already have an Account?<a [routerLink]="['/Login']">Sign In</a></p>
       </form>
     </div>
   </div>
 </div>
-<router-outlet></router-outlet>

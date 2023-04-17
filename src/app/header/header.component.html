@@ -1,16 +1,19 @@
 <div class="header-container">
   <!-- <img class="logo" src="{{ hi }}" /> -->
   <span class="leftHeader">
-  <img src="\assets\logo.png" alt="logo">
-  <p>2HOT</p>
+    <img src="\assets\logo.png" alt="logo" />
+    <h2>2 HOT</h2>
   </span>
-  <span class="rightHeader">
-    <a [routerLink]="['/Home']">Home</a>
-    <a [routerLink]="['/products']">About</a>
-    <a [routerLink]="['/category']">Service</a>
-    <a [routerLink]="['/Login']">Login</a>
-    <a [routerLink]="['/Register']">Register</a>
-  </span>
-
-  
+  <div class="navbar">
+    <div class="toggle_btn" (click)="showMenu()">
+      <i class="fa-solid fa-list"></i>
+    </div>
+    <div class="rightHeader" [class.menuClass]="menu">
+      <a [routerLink]="['/Home']">Home</a>
+      <a [routerLink]="['/about']">About</a>
+      <a [routerLink]="['/viewFoods']">Menu</a>
+      <a [routerLink]="['/Register']">Register</a>
+      <a [routerLink]="['/Login']">Logout</a>
+    </div>
+  </div>
 </div>

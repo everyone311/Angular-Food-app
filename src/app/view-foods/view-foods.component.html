@@ -1,2 +1,164 @@
-<p>view-foods works!</p>
-<h2>View details component</h2>
+<div class="Container">
+  <div class="PageHeader">
+    <div class="foodMenuTextContainer">
+      <div class="small-line"></div>
+      <div class="foodMenuText">Food Menu</div>
+      <div class="small-line"></div>
+    </div>
+    <div class="popularItems">Most Popular Items</div>
+  </div>
+</div>
+
+<div class="MyCart">
+  <button class="CartButton btn btn-warning" (click)="getCart()">
+    My Cart <span id="totItem">({{ SelectedItem }})</span>
+  </button>
+
+  <div class="Cart" *ngIf="cartVisible">
+    <div class="cartName">My Cart</div>
+    <div class="SelectedItem">
+      <table>
+        <ng-container *ngFor="let cart of CartArray">
+          <tr class="selected-item">
+            <td>
+              <div class="selectedItemName">
+                <div class="itemImage">
+                  <img
+                    src="/assets//{{ cart.imgUrl }}"
+                    class="selectedItemImg"
+                    alt=""
+                  />
+                </div>
+                <div class="itemName">{{ cart.name }}</div>
+              </div>
+            </td>
+            <td>
+              <div class="itemCost">{{ cart.cost }}</div>
+            </td>
+            <td>
+              <div class="itemQuantity">
+                <button
+                  class="incr"
+                  (click)="addBtn(cart, cart.qty, cart.cost)"
+                >
+                  <i class="fas fa-plus"></i>
+                </button>
+                <span>{{ cart.qty }}</span>
+                <button
+                  class="decr"
+                  (click)="subBtn(cart, cart.qty, cart.cost)"
+                >
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </ng-container>
+        <br />
+      </table>
+    </div>
+    <div class="TotalPrice">
+      <div class="TotName">Total Amount</div>
+      <div class="TotAmt">{{ totalAmount }}</div>
+    </div>
+    <div class="Buttons">
+      <button class="btn btn-danger" (click)="cancelButton()">Cancel</button>
+      <button class="btn btn-success">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<div class="FoodMenuBar">
+  <div class="RegularMenu">
+    <div class="Regular all" (click)="filterByCategory('All')">
+      <i class="fa-solid fa-concierge-bell"></i>
+      <div class="Text">All Foods</div>
+    </div>
+    <div class="Regular breakfast" (click)="filterByCategory('BreakFast')">
+      <i class="fa-solid fa-mug-hot"></i>
+      <div class="Text">Breakfast</div>
+    </div>
+    <div class="Regular lunch" (click)="filterByCategory('Lunch')">
+      <i class="fa-solid fa-burger"></i>
+      <div class="Text">Lunch</div>
+    </div>
+    <div class="Regular dinner" (click)="filterByCategory('Dinner')">
+      <i class="fa-solid fa-apple-whole"></i>
+      <div class="Text">Dinner</div>
+    </div>
+    <div class="Regular starter" (click)="filterByCategory('Starters')">
+      <img
+        src="\assets\starters\brochette (1).png"
+        class="bbq"
+        alt=""
+        width="40px"
+        height="40px"
+      />
+      <div class="Text">Starters</div>
+    </div>
+    <div class="Regular desserts" (click)="filterByCategory('Desserts')">
+      <i class="fa-solid fas fa-ice-cream"></i>
+      <div class="Text">Desserts</div>
+    </div>
+    <div class="Regular juice" (click)="filterByCategory('Juice')">
+      <i class="fa-solid fas fa-blender"></i>
+      <div class="Text">Beverages</div>
+    </div>
+  </div>
+
+  <div class="PopularMenu">
+    <div class="Special pizza" (click)="filterByCategory('Pizza')">
+      <img src="\assets\NavBar\pizza.jpg" alt="" class="splMenu" />
+      <div class="foodName">Pizza</div>
+    </div>
+
+    <div class="Special chicken" (click)="filterByCategory('Chicken')">
+      <img src="\assets\NavBar\chicken.jpg" alt="" class="splMenu" />
+      <div class="foodName">Chicken</div>
+    </div>
+
+    <div class="Special biriyani" (click)="filterByCategory('Biriyani')">
+      <img src="\assets\NavBar\biriyani.jpg" alt="" class="splMenu" />
+      <div class="foodName">Biriyani</div>
+    </div>
+
+    <div class="Special fried-rice" (click)="filterByCategory('FriedRice')">
+      <img src="\assets\NavBar\fried-rice.jpg" alt="" class="splMenu" />
+      <div class="foodName">Fried Rice</div>
+    </div>
+
+    <div class="Special burger" (click)="filterByCategory('Burger')">
+      <img src="\assets\NavBar\burger.jpg" alt="" class="splMenu" />
+      <div class="foodName">Burger</div>
+    </div>
+
+    <div class="Special idly" (click)="filterByCategory('Idli')">
+      <img src="\assets\NavBar\idly.jpg" alt="" class="splMenu" />
+      <div class="foodName">Idly</div>
+    </div>
+
+    <div class="Special dosa" (click)="filterByCategory('Dosa')">
+      <img src="\assets\NavBar\dosa.jpg" alt="" class="splMenu" />
+      <div class="foodName">Dosa</div>
+    </div>
+  </div>
+</div>
+
+<div class="foodContainer">
+  <div class="foodCard" *ngFor="let food of filteredItems">
+    <img
+      src="{{ '\assets\\' + food.imgUrl }}"
+      alt="foodImg"
+      width="250px"
+      height="200px"
+    />
+    <div class="foodName">{{ food.name }}</div>
+    <input type="hidden" value="{{ food.name }}" name="foodName" />
+    <div class="foodCost">{{ food.cost }}</div>
+    <div class="addCart">
+      <button class="btn btn-warning" (click)="addToCart(food)">
+        Add to cart <i class="fa-solid fas fa-cart-plus"></i>
+      </button>
+    </div>
+  </div>
+</div>
