@@ -8,8 +8,12 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   homeImg: string = '/assests/home-image.jpg';
   hi: string = '/assests/login.png';
-  menu:boolean=false;
-  showMenu(){
-     this.menu =!this.menu; 
-   }
+  menu: boolean = false;
+  showMenu() {
+    this.menu = !this.menu;
+  }
+  logoutButton() {
+    console.log('Logout');
+    localStorage.removeItem('user');
+  }
 }
