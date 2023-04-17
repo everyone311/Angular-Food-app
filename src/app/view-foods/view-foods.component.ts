@@ -10,7 +10,8 @@ import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 export class ViewFoodsComponent {
   getFoods: any[] = [];
   filteredItems: any[] = [];
-  constructor(private _getFoods: FoodDetailsService, private fb:FormBuilder) {
+
+  constructor(private _getFoods: FoodDetailsService, private fb: FormBuilder) {
     this.getFoods = _getFoods.getFoods();
     this.filteredItems = this.getFoods;
   }
@@ -26,62 +27,58 @@ export class ViewFoodsComponent {
       console.log('...', this.filteredItems);
     }
   }
-  
 
-  getPrice(value:any)
-  {
-    console.log("button is clicked");
+  getPrice(value: any) {
+    console.log('button is clicked');
     console.log(value.target.value);
-
   }
-  cartVisible:boolean = false;
-  getCart()
-  {
-    this.cartVisible = true;
-  }
-  cartDisable()
-  {
-    return this.cartVisible = false;
+  cartVisible: boolean = false;
+  getCart() {
+    this.cartVisible = !this.cartVisible;
   }
 
-  CartArray:any[] = [];
+  CartArray: any[] = [];
+
+  quantity: number = 0;
 
   SelectedItem = 0;
-  addToCart(val:any)
-  {
-    // alert("Item is added to the cart");
-    this.CartArray.push( val );
-    this.SelectedItem = this.CartArray.length;
-  }
+  totalAmount: number = 0;
 
-  amount = 0;
-  totalAmount = 0
-  addBtn(a:any,b:number,c:number)
-  {
-    if(a.qty!=6)
-    {
-      a.qty+= 1;
+  addToCart(item: any) {
+    const index = this.CartArray.findIndex(
+      (cartItem) => cartItem.id === item.id
+    );
+    if (index === -1) {
+      const newItem = { ...item, qty: 1 };
+      this.CartArray.push(newItem);
+      this.SelectedItem++;
+    } else {
+      this.CartArray[index].qty++;
+      this.SelectedItem++;
     }
-    this.amount = b * c ;
 
-    this.totalAmount =  this.amount; 
-
+    this.totalAmount = this.CartArray.reduce(
+      (acc, curr) => acc + curr.cost * curr.qty,
+      0
+    );
   }
 
-  subBtn(a:any,b:number,c:number)
-  {
-    if(a.qty != 1)
-    {
-      a.qty -= 1;
+  cancelButton() {
+    this.CartArray = [];
+    this.totalAmount = 0;
+    this.SelectedItem = 0;
+    this.cartVisible = false;
+  }
+
+  addBtn(item: any, qty: number, cost: number) {
+    item.qty++;
+    this.totalAmount += cost;
+  }
+
+  subBtn(item: any, qty: number, cost: number) {
+    if (qty > 1) {
+      item.qty--;
+      this.totalAmount -= cost;
     }
-    // this.amount = this.amount - c ;
-
-    this.totalAmount = this.amount - c
   }
-
- 
-
-  
-
-  
 }
