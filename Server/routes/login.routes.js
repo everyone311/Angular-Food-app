@@ -1,8 +1,6 @@
 const express = require("express");
 const app = express();
-
 const routing = express.Router();
-// let Login = require("../model/Login");
 let Register = require("../model/Register");
 
 
