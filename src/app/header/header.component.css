@@ -20,22 +20,23 @@ img {
   margin-top: -87px;
   margin-left: -42px;
 }
-p{
+h2{
   margin: -104px 0 10px;
-    margin-left: 101px;
-
+  margin-left: 101px;
+  font-family: 'DynaPuff', cursive;
 }
 a
 {
   text-decoration: none;
   color: white;
 }
+.rightHeader a:hover
+{
+  transition: 0.1s;
+  border-bottom: 5px solid white;
 
-/* .rightHeader a :active {
-  background-color: rgb(252, 219, 99);
-  color: white;
-} */
-
+  scale: 2;
+}
 .rightHeader {
   float: right;
   padding-top: 10px;
@@ -52,37 +53,11 @@ a
   position: sticky;
   top: 0;
   z-index: 1;
-  background: linear-gradient(to bottom, brown, rgb(37, 37, 37));
+  background-color:  brown;
   color: white;
   padding: 20px 10px 10px 10px;
   box-shadow: 0px 0px 0px 1.5px rgb(197, 197, 163);
 }
-
-.rightHeader a:hover
-{
-    text-decoration: none;
-    position: relative;
-    color: #e2d112;
-    transform: scale(1.1);
-}
-
-.rightHeader a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color:#e2d112;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-    transform: scaleX(0);
-  }
-  .rightHeader a:hover::after
-  {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
   .toggle_btn{
     float: right;
     font-size: 1.5rem;
@@ -97,15 +72,20 @@ a
       position: absolute;
       top: 91px;
       width:280px;
-      background: linear-gradient(to bottom, brown, rgb(37, 37, 37));;
-      backdrop-filter: blur(15px);
+      background-color: brown;
       border-radius: 10px;
       margin-top: -19px;
       margin-right: -257px;
       display: none;
     }
+    .rightHeader a:hover
+{
+  border:none;
+
+}
     .navbar a{
       display: block;
+
     }
     .toggle_btn{
       display:block;
