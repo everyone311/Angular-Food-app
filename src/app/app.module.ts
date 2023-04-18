@@ -17,6 +17,7 @@ import { AboutComponent } from './about/about.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { PaymentComponent } from './payment/payment.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { PaymentComponent } from './payment/payment.component';
     ReactiveFormsModule,
     IonicModule,
     HttpClientModule,
+    FormsModule
   ],
 
   providers: [],

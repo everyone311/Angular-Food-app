@@ -33,7 +33,7 @@
               </div>
             </td>
             <td>
-              <div class="itemCost">{{ cart.cost | currency : "INR" }}</div>
+              <div class="itemCost">{{ cart.cost }}</div>
             </td>
             <td>
               <div class="itemQuantity">
@@ -65,7 +65,7 @@
 
     <div class="TotalPrice">
       <div class="TotName">Total Amount</div>
-      <div class="TotAmt">{{ totalAmount | currency : "INR" }}</div>
+      <div class="TotAmt">{{ totalAmount }}</div>
     </div>
     <div class="Buttons">
       <button class="btn btn-danger" (click)="cancelButton()">Cancel</button>
@@ -112,6 +112,7 @@
     </div>
   </div>
 
+
   <div class="PopularMenu">
     <div class="Special pizza" (click)="filterByCategory('Pizza')">
       <img src="\assets\NavBar\pizza.jpg" alt="" class="splMenu" />
@@ -149,6 +150,14 @@
     </div>
   </div>
 </div>
+<div class="main">
+<div class="input-group">
+  <input type="text" class="form-control"/>
+  <span class="input-group-addon">
+      <i class="fa fa-search"></i>
+  </span>
+</div>
+</div>
 
 <div class="foodContainer">
   <div class="foodCard" *ngFor="let food of filteredItems">
@@ -160,7 +169,7 @@
     />
     <div class="foodName">{{ food.name }}</div>
     <input type="hidden" value="{{ food.name }}" name="foodName" />
-    <div class="foodCost">{{ food.cost | currency : "INR" }}</div>
+    <div class="foodCost">{{ food.cost }}</div>
     <div class="addCart">
       <button class="btn btn-warning" (click)="addToCart(food)">
         Add to cart <i class="fa-solid fas fa-cart-plus"></i>
