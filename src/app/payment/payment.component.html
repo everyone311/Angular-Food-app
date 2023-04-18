@@ -1,108 +1,140 @@
 <div class="container">
-    <div class="payment">
+    <div class="fpayment">
         <div class="form">
-        <form [formGroup]="form" (ngSubmit)="onsubmit()">
-            <div class="form-group">
-                <label>Customer Name</label>
-                <input type="text" formControlName="cname" class="form-control"
-                    [ngClass]="{'is-valid':submit && f['cname].errors']}" />
-                <div *ngIf="submit && f['cname'].errors" class="invalid-feedback">
-                    <div *ngIf=" f['cname'].errors['required']" class="text-danger">Customername is Required</div>
-                </div>
-
-            </div>
-
-            <div class="form-gontrol">
-                <label for="Phone">Phone</label>
-                <input type="number" class="form-control" id="phone" formControlName="p.no"
-                 [ngClass]="{'is-valid':submit && f['pno].errors']}" />
-                <div *ngIf="submit && f['pno'].errors" class="invalid-feedback">
-                    <div *ngIf=" f['pno'].errors['required']" class="text-danger">Phone Number is Required</div>
-                    <div *ngIf=" f['pno'].errors['minLength']" class="text-danger">Phone Number is Short</div>
-                    <div *ngIf=" f['pno'].errors['maxLength']" class="text-danger">Phone Number is long</div>
-                </div>
-
-            </div>
-             <div class="form-gontrol">
-                <label for="price">Total Price</label>
-                <input type="number" class="form-control" formControlName="price"
-                [ngClass]="{'is-valid':submit && f['price].errors']}" />
-                <div *ngIf="submit && f['price'].errors" class="invalid-feedback">
-                    <div *ngIf=" f['price'].errors['required']" class="text-danger">Phone Number is Required</div>
-                    
-                </div>
-            </div>
-            <div class="form-gontrol">
-                <label for="address">Address</label>
-                <input type="text-box" class="form-control" id="address" formControlName="address"
-                [ngClass]="{'is-valid':submit && f['address].errors']}" />
-                <div *ngIf="submit && f['address'].errors" class="invalid-feedback">
-                    <div *ngIf=" f['address'].errors['required']" class="text-danger">Address is Required</div>
-                    
-                </div>
-     
+            <form  [formGroup]="form"  (ngSubmit)="onsubmit()">
                 
-            </div>
-            <label>Payment Method</label>
-            <div>
+                    <div class="form-group">
+                        <label>Customer Name</label>
+                        <input type="text" formControlName="cname" class="form-control"
+                            [ngClass]="{'is-valid':submit && f['cname.errors']}" />
+                        <div *ngIf="submit && f['cname'].errors" class="invalid-feedback">
+                            <div *ngIf=" f['cname'].errors['required']" class="text-danger">Customername is Required
+                            </div>
+                        </div>
 
-                <button type="submit" class="btn btn-primary btn-lg active">Cash On Delivery</button>
-                <button type="submit" class="btn btn-secondary btn-lg active">Online Payment</button>
-
-            </div>
-        </form>
-    </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-4">
-                <div class="panel panel-default credit-card-box">
-                    <div class="panel-heading display-table">
-                        <div class="row display-tr">
-                            <h3 class="panel-title display-td">Payment Details</h3>
-                             </div>
                     </div>
-                    <div class="panel-body">
-                        <form role="form" id="payment-form">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <div class="form-group">
-                                        <label for="cardNumber">CARD NUMBER</label>
-                                        <div class="input-group">
-                                            <input type="tel" class="form-control" name="cardNumber"
-                                                placeholder="Valid Card Number" />
-                                            <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+
+                    <div class="form-group">
+                        <label for="phone">Phone number</label><br>
+                        <input type="text" formControlName="phone" class="form-control"
+                            [ngClass]="{ 'is-invalid':submit && f['phone'].errors}">
+                        <div *ngIf="submit && f['phone'].errors">
+                            <div *ngIf="f['phone'].errors['required']" class="text-danger">Phone number is required
+                            </div>
+                            <div *ngIf="f['phone'].errors['minlength']" class="text-danger">Phoneno is short</div>
+                            <div *ngIf="f['phone'].errors['maxlength']" class="text-danger">Phoneno is long</div>
+                        </div>
+                    </div>
+                    <div class="form-gontrol">
+                        <label for="price">Total Cost</label>
+                        <input type="number" class="form-control" formControlName="price"
+                            [ngClass]="{'is-valid':submit && f['price.errors']}" />
+                        <div *ngIf="submit && f['price'].errors" class="invalid-feedback">
+                            <div *ngIf=" f['price'].errors['required']" class="text-danger">Total Cost is Required</div>
+
+                        </div>
+                    </div>
+                    <div class="form-gontrol">
+                        <label for="address">Address</label>
+                        <input type="text-box" class="form-control" id="address" formControlName="address"
+                            [ngClass]="{'is-valid':submit && f['address.errors']}" />
+                        <div *ngIf="submit && f['address'].errors" class="invalid-feedback">
+                            <div *ngIf=" f['address'].errors['required']" class="text-danger">Address is Required</div>
+
+                        </div>
+
+
+                    </div>
+                    <label>Payment Method</label>
+                    <div class="paymentMethod">
+
+                        <button type="submit" class="btn btn-primary btn-lg active">cash On delivery</button><br>
+                        <button type="submit" class="btn btn-secondary btn-lg active" (click)="onlinePayment()">Online
+                            Payment</button><br>
+
+                    </div>
+            
+                <div class="onlinepayment" [class.online]="online">
+                    <label>OnlinePayment Method</label>
+                    <div>
+                        <button type="submit" class="btn btn-primary btn-lg active">G pay</button><br>
+                        <button type="submit" class="btn btn-secondary btn-lg active" (click)="creditcard()">Credit
+                            Card</button><br>
+                    </div>
+                </div>
+                <div class="cpayment" [class.payment]="payment">
+                    <div class="row">
+                        <div class="panel panel-default credit-card-box">
+                            <div class="panel-heading display-table">
+                                <div class="row display-tr">
+                                    <h2 class="panel-title display-td">Payment Details</h2>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <form role="form" id="payment-form">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label for="cardNumber">CARD NUMBER</label>
+                                        <div>
+                                            <div class="input-group">
+                                        
+                                                <input type="number" class="form-control" formControlName="cno"
+                                                    placeholder="Valid Card Number" class="form-control"
+                                                    [ngClass]="{'is-valid':submit && f['cno.errors']}" />
+                                                    <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                                    </div>
+                                                <div *ngIf="submit && f['cno'].errors" class="invalid-feedback">
+                                                    <div *ngIf=" f['cno'].errors['required']" class="text-danger">
+                                                        Creditcard number is Required</div>
+                                                        <div *ngIf="f['cno'].errors['minlength']" class="text-danger">Phoneno is short</div>
+                            <div *ngIf="f['cno'].errors['maxlength']" class="text-danger">Phoneno is long</div>
+                                                </div>
+                                               
+                                            </div>
                                         </div>
+
+
+
+
+                                        <div class="form-group">
+                                            <label for="cardExpiry">EXPIRING DATE</label>
+                                            <input type="tel" class="form-control" name="cardExpiry"
+                                                placeholder="MM / YY" class="form-control" formControlName="my" class="form-control"
+                                                [ngClass]="{'is-valid':submit && f['my.errors']}" />
+                                            <div *ngIf="submit && f['my'].errors" class="invalid-feedback">
+                                                <div *ngIf=" f['my'].errors['required']" class="text-danger">
+                                                     Expiring month and year is Required</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="cardCVC">CV CODE</label>
+                                            <input type="tel" class="form-control" name="cardCVC" placeholder="CVC" 
+                                            class="form-control" formControlName="cvc" class="form-control"
+                                                [ngClass]="{'is-valid':submit && f['my.errors']}" />
+                                            <div *ngIf="submit && f['cvc'].errors" class="invalid-feedback">
+                                                <div *ngIf=" f['cvc'].errors['required']" class="text-danger">
+                                                     cv code is Required</div>
+                                            </div>
+                                        </div>
+
+
+
                                     </div>
-                                </div>
+                                </form>
                             </div>
-                            <div class="row">
-                                <div class="col-xs-7 col-md-7">
-                                    <div class="form-group">
-                                        <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span
-                                                >EXP</span> DATE</label>
-                                        <input type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY"/>
-                                    </div>
-                                </div>
-                                <div class="col-xs-5 col-md-5 pull-right">
-                                    <div class="form-group">
-                                        <label for="cardCVC">CV CODE</label>
-                                        <input type="tel" class="form-control" name="cardCVC" placeholder="CVC" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <button class="btn btn-success btn-lg btn-block" type="submit">submit</button>
-                                </div>
-                            </div>
-                            <div class="row" style="display:none;">
-                                <div class="col-xs-12">
-                                    <p class="payment-errors"></p>
-                                </div>
-                            </div>
-                        </form>
+                        </div>
+
                     </div>
                 </div>
     
-    
+            <div class="row">
+                <div class="col-xs-12" id="submit-btn">
+                    <button class="btn btn-success btn-lg btn-block" type="submit">submit</button>
+                </div>
+            </div>
+            </form>
+        </div>
+
     </div>
 </div>
