@@ -549,8 +549,9 @@ th {
     }
   }
 }
-.main{
-  width:50%;
-  margin: 50px auto;
 
+.emptyCartMessage {
+  padding: 15px;
+  color: rgb(252, 92, 34);
+  font-weight: bold;
 }
