@@ -1,32 +1,84 @@
+.onlinepayment{
+    display: none;
+    margin-top: 45px;
+}
+.onlinePaymentHeader
+{
+    text-align: center;
+}
+
+.cpayment{
+    display: none;
+    padding: 20px;
+}
+.cpayment h2
+{
+    text-align: center;
+}
+.cpayment .row
+{
+    padding: 10px;
+}
+.cpayment .form-control
+{
+    margin: 5px;
+}
 .container{
-    background-image: url(../../assets/payment.jpg);
-    height: 200%;
-    background-repeat:no-repeat;
-    background-size: cover;
+   
+    /* display: flex; */
+    justify-content: center;
+}
+.form
+{
+    transform: scale(0.7);
+}
+.btn 
+{
+    border-radius: 5px;
 }
 .form-container{
-    padding-right: 2px;
+    /* padding-right: 2px; */
 }
 .fpayment{
-    padding-top: 45px;
+    /* padding-top: 45px;
     padding-bottom: 45px;
     margin-left: 223px;
-    margin-right: 168px;
+    margin-right: 168px; */
+}
+.btn-secondary
+{
+    background-color: lightgray;
+}
+.btn-success
+{
+    font-size: 29px;
+}
+textarea
+{
+    margin-bottom: 10px;
 }
 .form{
-    padding-top: 45px;
-    padding-bottom: 45px;
-    padding-left: 107px;
+    /* padding-top: 45px;
+    padding-bottom: 45px; */
+    /* padding-left: 107px; */
+    padding: 20px;
     background-color: aliceblue;
-    box-shadow: 3px 12px 18px 5px rgb(36, 34, 34);
+    box-shadow: 0px 7px 12px 0px rgb(36, 34, 34);
+}
+.FormHeader
+{
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 #address{
     height:163px;
 }
-.form-control{
-    width: 61%;
-    border-radius: 20px;
-   
+.fa-credit-card
+{
+    transform: scale(2);
+    text-decoration: none;
+    background-color: none;
 }
 button{
     border-radius: 20px;
@@ -37,7 +89,7 @@ button{
     font-weight: bold;
     font-size: 22px;
 }
-.credit-card-box .form-control.error {
+.credit-card-box .form-control .error {
     border-color: red;
     outline: 0;
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255,0,0,0.6);
@@ -61,16 +113,11 @@ button{
 }
 /* Just looks nicer */
 
-.cpayment{
-    display: none;
-}
+
 .credit-card-box .panel-heading img {
     min-width: 180px;
 }
-.row input-group .form-control:first-child {
-    border-top-right-radius: 0;
-    width: 102%;
-}
+
 .panel-default {
     border-color: #ddd;
     width: 100%;
@@ -85,23 +132,34 @@ button{
 .payment{
     padding-top: 15px;
     display: block;
-    width:60%
+    /* width:60% */
 }
-.onlinepayment{
-    display: none;
-    margin-top: 45px;
-}
+
 .online{
     padding-top: 15px;
     display: inline;
 }
 button {
-    border-radius: 20px;
+    /* border-radius: 20px; */
     margin-bottom: 2%;
 }
 #submit-btn{
-    width: 50%;
+    /* width: 50%; */
+    text-align: center;
+    font-size: 34px;
 }
 label{
     text-align:center;
+}
+.text-danger
+{
+    text-indent: 10px;
+}
+hr
+{
+    border: 2px solid rgb(180, 179, 179);
+}
+
+h2{
+    font-weight: bold;
 }

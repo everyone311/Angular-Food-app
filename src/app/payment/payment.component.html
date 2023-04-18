@@ -1,14 +1,14 @@
 <div class="container">
     <div class="fpayment">
         <div class="form">
+        <h1 class="FormHeader">Payment Details</h1>
             <form  [formGroup]="form"  (ngSubmit)="onsubmit()">
-                
                     <div class="form-group">
                         <label>Customer Name</label>
                         <input type="text" formControlName="cname" class="form-control"
-                            [ngClass]="{'is-valid':submit && f['cname.errors']}" />
+                            [ngClass]="{'is-valid':submit && f['cname.errors']}" autofocus/>
                         <div *ngIf="submit && f['cname'].errors" class="invalid-feedback">
-                            <div *ngIf=" f['cname'].errors['required']" class="text-danger">Customername is Required
+                            <div *ngIf=" f['cname'].errors['required']" class="text-danger">Customer name is Required!
                             </div>
                         </div>
 
@@ -19,10 +19,10 @@
                         <input type="text" formControlName="phone" class="form-control"
                             [ngClass]="{ 'is-invalid':submit && f['phone'].errors}">
                         <div *ngIf="submit && f['phone'].errors">
-                            <div *ngIf="f['phone'].errors['required']" class="text-danger">Phone number is required
+                            <div *ngIf="f['phone'].errors['required']" class="text-danger">Phone number is required!
                             </div>
-                            <div *ngIf="f['phone'].errors['minlength']" class="text-danger">Phoneno is short</div>
-                            <div *ngIf="f['phone'].errors['maxlength']" class="text-danger">Phoneno is long</div>
+                            <div *ngIf="f['phone'].errors['minlength']" class="text-danger">Phone number is short!</div>
+                            <div *ngIf="f['phone'].errors['maxlength']" class="text-danger">Phone number is long!</div>
                         </div>
                     </div>
                     <div class="form-gontrol">
@@ -30,32 +30,34 @@
                         <input type="number" class="form-control" formControlName="price"
                             [ngClass]="{'is-valid':submit && f['price.errors']}" />
                         <div *ngIf="submit && f['price'].errors" class="invalid-feedback">
-                            <div *ngIf=" f['price'].errors['required']" class="text-danger">Total Cost is Required</div>
+                            <div *ngIf=" f['price'].errors['required']" class="text-danger">Total Cost is Required!</div>
 
                         </div>
                     </div>
                     <div class="form-gontrol">
                         <label for="address">Address</label>
-                        <input type="text-box" class="form-control" id="address" formControlName="address"
-                            [ngClass]="{'is-valid':submit && f['address.errors']}" />
+                        <!-- <input type="text-box" class="form-control" id="address" formControlName="address"
+                            [ngClass]="{'is-valid':submit && f['address.errors']}" /> -->
+                            
+                        <textarea name="" id="address" cols="30" rows="7" class="form-control" formControlName="address" 
+                        [ngClass]="{'is-valid':submit && f['address.errors']}"></textarea>
                         <div *ngIf="submit && f['address'].errors" class="invalid-feedback">
-                            <div *ngIf=" f['address'].errors['required']" class="text-danger">Address is Required</div>
+                            <div *ngIf=" f['address'].errors['required']" class="text-danger">Address is Required!</div>
 
                         </div>
 
 
                     </div>
-                    <label>Payment Method</label>
+                    <h2 class="paymentMethod">Payment Method</h2>
                     <div class="paymentMethod">
 
-                        <button type="submit" class="btn btn-primary btn-lg active">cash On delivery</button><br>
+                        <button type="submit" class="btn btn-primary btn-lg active">Cash on delivery</button><br>
                         <button type="submit" class="btn btn-secondary btn-lg active" (click)="onlinePayment()">Online
                             Payment</button><br>
 
                     </div>
-            
                 <div class="onlinepayment" [class.online]="online">
-                    <label>OnlinePayment Method</label>
+                    <hr><div class="onlinePaymentHeader">Online Payment Method</div><hr>
                     <div>
                         <button type="submit" class="btn btn-primary btn-lg active">G pay</button><br>
                         <button type="submit" class="btn btn-secondary btn-lg active" (click)="creditcard()">Credit
@@ -63,6 +65,7 @@
                     </div>
                 </div>
                 <div class="cpayment" [class.payment]="payment">
+                   <hr> <h2>Credit Card Details</h2><hr>
                     <div class="row">
                         <div class="panel panel-default credit-card-box">
                             <div class="panel-heading display-table">
@@ -85,17 +88,14 @@
                                                     </div>
                                                 <div *ngIf="submit && f['cno'].errors" class="invalid-feedback">
                                                     <div *ngIf=" f['cno'].errors['required']" class="text-danger">
-                                                        Creditcard number is Required</div>
-                                                        <div *ngIf="f['cno'].errors['minlength']" class="text-danger">Phoneno is short</div>
-                            <div *ngIf="f['cno'].errors['maxlength']" class="text-danger">Phoneno is long</div>
+                                                        Credit card number is Required!</div>
+                                                        <div *ngIf="f['cno'].errors['minlength']" class="text-danger">Phone number is short!</div>
+                            <div *ngIf="f['cno'].errors['maxlength']" class="text-danger">Phone number is long!</div>
                                                 </div>
                                                
                                             </div>
                                         </div>
-
-
-
-
+                                        
                                         <div class="form-group">
                                             <label for="cardExpiry">EXPIRING DATE</label>
                                             <input type="tel" class="form-control" name="cardExpiry"
@@ -103,18 +103,18 @@
                                                 [ngClass]="{'is-valid':submit && f['my.errors']}" />
                                             <div *ngIf="submit && f['my'].errors" class="invalid-feedback">
                                                 <div *ngIf=" f['my'].errors['required']" class="text-danger">
-                                                     Expiring month and year is Required</div>
+                                                     Expiring month and year is Required!</div>
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="cardCVC">CV CODE</label>
+                                            <label for="cardCVC">CVV CODE</label>
                                             <input type="tel" class="form-control" name="cardCVC" placeholder="CVC" 
                                             class="form-control" formControlName="cvc" class="form-control"
                                                 [ngClass]="{'is-valid':submit && f['my.errors']}" />
                                             <div *ngIf="submit && f['cvc'].errors" class="invalid-feedback">
                                                 <div *ngIf=" f['cvc'].errors['required']" class="text-danger">
-                                                     cv code is Required</div>
+                                                     CVV code is Required!</div>
                                             </div>
                                         </div>
 
@@ -130,11 +130,12 @@
     
             <div class="row">
                 <div class="col-xs-12" id="submit-btn">
-                    <button class="btn btn-success btn-lg btn-block" type="submit">submit</button>
+                    <button class="btn btn-success btn-lg btn-block" type="submit">Submit</button>
                 </div>
             </div>
             </form>
         </div>
 
     </div>
+   
 </div>
