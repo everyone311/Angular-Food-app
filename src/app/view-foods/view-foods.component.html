@@ -57,13 +57,19 @@
         <br />
       </table>
     </div>
+
+    <div *ngIf="SelectedItem === 0">
+      <img src="../../assets/emptycart.png" />
+      <div class="emptyCartMessage">Your Cart is Empty!</div>
+    </div>
+
     <div class="TotalPrice">
       <div class="TotName">Total Amount</div>
       <div class="TotAmt">{{ totalAmount | currency : "INR" }}</div>
     </div>
     <div class="Buttons">
       <button class="btn btn-danger" (click)="cancelButton()">Cancel</button>
-      <button class="btn btn-success" (click)="confirmButton()"><a [routerLink]="['/payment']">Confirm</a></button>
+      <button class="btn btn-success" (click)="confirmButton()">Confirm</button>
     </div>
   </div>
 </div>

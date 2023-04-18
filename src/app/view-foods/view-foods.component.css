@@ -549,3 +549,8 @@ th {
     }
   }
 }
+.emptyCartMessage {
+  padding: 15px;
+  color: rgb(252, 92, 34);
+  font-weight: bold;
+}
