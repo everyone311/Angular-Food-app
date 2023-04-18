@@ -30,7 +30,7 @@ export class FoodDetailsService {
       },
       {
         id: 4,
-        name: 'Chicken Biriyani',
+        name: 'Chettinad Chicken Biriyani',
         cost: 145,
         imgUrl: '/chicken/biriyani.jpg',
         category: 'Chicken',

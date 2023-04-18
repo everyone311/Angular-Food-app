@@ -23,7 +23,9 @@ export class RegisterPageComponent implements OnInit {
     email: new FormControl('', [Validators.required, Validators.email]),
     phone: new FormControl('', [
       Validators.required,
-      Validators.pattern('[0-9]*'),
+
+      Validators.pattern(/^[6-9]\d{9}$/),
+
       Validators.minLength(10),
       Validators.maxLength(10),
     ]),
