@@ -13,7 +13,9 @@
       <a [routerLink]="['/about']">About</a>
       <a [routerLink]="['/viewFoods']">Menu</a>
       <a [routerLink]="['/Register']">Register</a>
-      <a [routerLink]="['/Login']" (click)="logoutButton()">Logout</a>
+      <a [routerLink]="['/Login']" (click)="logoutButton()" *ngIf="user"
+        >Logout</a
+      >
       <span class="userClass" *ngIf="user">Welcome {{ username }}!</span>
     </div>
   </div>

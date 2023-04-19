@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import {
   Validators,
   FormArray,
@@ -38,11 +39,6 @@ export class PaymentComponent {
       price: ['', [Validators.required]],
       address: ['', [Validators.required]],
       cno: ['', [Validators.required, Validators.pattern(/^[0-9]\d{15}$/)]],
-      // my: ['', [Validators.required]],
-      // cvc: [
-      //   '',
-      //   [Validators.required, Validators.minLength(3), Validators.maxLength(3)],
-      // ],
     });
   }
 
@@ -53,6 +49,7 @@ export class PaymentComponent {
 
   message: string = '';
   onsubmit(): void {
+    // console.log('cost', this.cost);
     this.submit = true;
     console.log('...', this.form);
     if (this.form.status === 'VALID') {
