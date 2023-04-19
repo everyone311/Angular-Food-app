@@ -17,7 +17,6 @@ export class HeaderComponent {
   logoutButton() {
     console.log('Logout');
     localStorage.removeItem('user');
-    // window.location.reload();
   }
 
   ngOnInit(): void {

@@ -1,7 +1,7 @@
 import { Component, NgZone } from '@angular/core';
 import { FoodDetailsService } from '../food-details.service';
 import { Router } from '@angular/router';
-import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-view-foods',
@@ -81,6 +81,7 @@ export class ViewFoodsComponent {
     this.SelectedItem = 0;
     this.cartVisible = false;
   }
+
   confirmButton() {
     if (this.SelectedItem === 0) {
       alert('Please add any itme to order!!');
@@ -105,7 +106,6 @@ export class ViewFoodsComponent {
       const index = this.CartArray.indexOf(item);
       if (index > -1) {
         this.CartArray.splice(index, 1);
-        // this.SelectedItem--;
       }
     }
   }
