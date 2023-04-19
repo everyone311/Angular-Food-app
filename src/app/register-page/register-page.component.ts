@@ -1,6 +1,7 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { LoginService } from '../login.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import {
   FormControl,
   FormGroup,
@@ -42,7 +43,8 @@ export class RegisterPageComponent implements OnInit {
     private Rf: FormBuilder,
     public router: Router,
     private ngZone: NgZone,
-    private LoginService: LoginService
+    private LoginService: LoginService,
+    private toastr: ToastrService
   ) {}
 
   get username(): FormControl {
@@ -82,6 +84,8 @@ export class RegisterPageComponent implements OnInit {
         (res) => {
           console.log('Response', res);
           this.successMessage = res.message;
+
+          this.toastr.success('Registered Successfully!', 'Success');
 
           this.regForm.reset();
           this.ngZone.run(() => this.router.navigateByUrl('/Login'));
