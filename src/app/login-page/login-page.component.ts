@@ -1,6 +1,7 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
+import { ToastrService } from 'ngx-toastr';
 import {
   FormControl,
   FormGroup,
@@ -22,7 +23,8 @@ export class LoginPageComponent implements OnInit {
     private Lf: FormBuilder,
     private router: Router,
     private ngZone: NgZone,
-    private LoginService: LoginService
+    private LoginService: LoginService,
+    private toastr: ToastrService
   ) {
     this.loginForm = this.Lf.group({
       username: [
@@ -62,6 +64,7 @@ export class LoginPageComponent implements OnInit {
           console.log('Loggged in!', res);
 
           localStorage.setItem('user', res.user.username);
+          this.toastr.success('Logged in Successfully!', 'Success');
 
           this.ngZone.run(() => this.router.navigateByUrl('/Home'));
           this.loginForm.reset();

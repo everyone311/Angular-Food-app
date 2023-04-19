@@ -18,7 +18,8 @@ import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-co
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { PaymentComponent } from './payment/payment.component';
 import { FormsModule } from '@angular/forms';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     IonicModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot(),
   ],
 
   providers: [],

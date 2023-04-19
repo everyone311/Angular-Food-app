@@ -85,7 +85,7 @@ export class ViewFoodsComponent {
     if (this.SelectedItem === 0) {
       alert('Please add any itme to order!!');
     } else {
-      alert('Your Order Confirmed!!');
+      this.router.navigate(['/payment']);
     }
   }
 

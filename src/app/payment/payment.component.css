@@ -1,165 +1,154 @@
-.onlinepayment{
-    display: none;
-    margin-top: 45px;
+.onlinepayment {
+  display: none;
+  /* margin-top: 2px; */
 }
-.onlinePaymentHeader
-{
-    text-align: center;
+.onlinePaymentHeader {
+  text-align: center;
 }
 
-.cpayment{
-    display: none;
-    padding: 20px;
+.cpayment {
+  display: none;
+  padding: 20px;
 }
-.cpayment h2
-{
-    text-align: center;
+.cpayment h2 {
+  text-align: center;
 }
-.cpayment .row
-{
-    padding: 10px;
+.cpayment .row {
+  padding: 10px;
 }
-.cpayment .form-control
-{
-    margin: 5px;
+.cpayment .form-control {
+  margin: 5px;
 }
-.container{
-   
-    /* display: flex; */
-    justify-content: center;
+.container {
+  /* display: flex; */
+  justify-content: center;
 }
-.form
-{
-    transform: scale(0.7);
+.form {
+  transform: scale(0.7);
 }
-.btn 
-{
-    border-radius: 5px;
+.btn {
+  border-radius: 5px;
 }
-.form-container{
-    /* padding-right: 2px; */
+.form-container {
+  /* padding-right: 2px; */
 }
-.fpayment{
-    /* padding-top: 45px;
+.fpayment {
+  /* padding-top: 45px;
     padding-bottom: 45px;
     margin-left: 223px;
     margin-right: 168px; */
 }
-.btn-secondary
-{
-    background-color: lightgray;
+.btn-secondary {
+  background-color: lightgray;
 }
-.btn-success
-{
-    font-size: 29px;
+.btn-success {
+  font-size: 29px;
 }
-textarea
-{
-    margin-bottom: 10px;
+textarea {
+  margin-bottom: 10px;
 }
-.form{
-    /* padding-top: 45px;
+.form {
+  /* padding-top: 45px;
     padding-bottom: 45px; */
-    /* padding-left: 107px; */
-    padding: 20px;
-    background-color: aliceblue;
-    box-shadow: 0px 7px 12px 0px rgb(36, 34, 34);
+  /* padding-left: 107px; */
+  padding: 20px;
+  background-color: aliceblue;
+  box-shadow: 0px 7px 12px 0px rgb(36, 34, 34);
 }
-.FormHeader
-{
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+.FormHeader {
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
-#address{
-    height:163px;
+#address {
+  height: 163px;
 }
-.fa-credit-card
-{
-    transform: scale(2);
-    text-decoration: none;
-    background-color: none;
+.fa-credit-card {
+  transform: scale(2);
+  text-decoration: none;
+  background-color: none;
 }
-button{
-    border-radius: 20px;
+button {
+  border-radius: 20px;
 }
 /*credit card*/
 .credit-card-box .panel-title {
-    display: inline;
-    font-weight: bold;
-    font-size: 22px;
+  display: inline;
+  font-weight: bold;
+  font-size: 22px;
 }
 .credit-card-box .form-control .error {
-    border-color: red;
-    outline: 0;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255,0,0,0.6);
+  border-color: red;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
 }
 
-
 .credit-card-box label {
-    display: inline;
+  display: inline;
 }
 
 .credit-card-box .display-table {
-    display: table;
+  display: table;
 }
 .credit-card-box .display-tr {
-    display: table-row;
+  display: table-row;
 }
 .credit-card-box .display-td {
-    display: table-cell;
-    vertical-align: middle;
-    width: 50%;
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
 }
 /* Just looks nicer */
 
-
 .credit-card-box .panel-heading img {
-    min-width: 180px;
+  min-width: 180px;
 }
 
 .panel-default {
-    border-color: #ddd;
-    width: 100%;
+  border-color: #ddd;
+  width: 100%;
 }
-.input-group .form-control:first-child{
-    width:100%;
+.input-group .form-control:first-child {
+  width: 100%;
 }
 .panel-default .panel-heading {
-    width: 100%;
-    font-size: 45px;
+  width: 100%;
+  font-size: 45px;
 }
-.payment{
-    padding-top: 15px;
-    display: block;
-    /* width:60% */
+.payment {
+  padding-top: 15px;
+  display: block;
+  /* width:60% */
 }
 
-.online{
-    padding-top: 15px;
-    display: inline;
+.online {
+  padding-top: 15px;
+  display: inline;
 }
 button {
-    /* border-radius: 20px; */
-    margin-bottom: 2%;
+  /* border-radius: 20px; */
+  margin-bottom: 2%;
 }
-#submit-btn{
-    /* width: 50%; */
-    text-align: center;
-    font-size: 34px;
+#submit-btn {
+  /* width: 50%; */
+  text-align: center;
+  font-size: 34px;
 }
-label{
-    text-align:center;
+label {
+  text-align: center;
 }
-.text-danger
-{
-    text-indent: 10px;
+.text-danger {
+  text-indent: 10px;
 }
-hr
-{
-    border: 2px solid rgb(180, 179, 179);
+hr {
+  border: 2px solid rgb(180, 179, 179);
 }
 
-h2{
-    font-weight: bold;
+h2 {
+  font-weight: bold;
+}
+.successMessage {
+  color: green;
+  font-size: 24px;
+  text-align: center;
 }
